@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="hubGourmetApp">
+  <head>
+    <meta charset="UTF-8">
+    <title>HUB GOURMET</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-resource.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-smart-table/2.1.8/smart-table.min.js" integrity="sha256-S5x+qJjCFqrC76Ik7kIQIexNmwlyeN6ARc1VgxDznBo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/adonespitogo/angular-base64-upload/v0.1.19/dist/angular-base64-upload.min.js"></script>
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+  </head>
+  <body>
+
+    <div ng-view></div>
+    
+    <script src="/app/app.module.js"></script>
+    <script src="/app/services/product.service.js"></script>
+    <script src="/app/products/products.controller.js"></script>
+    <script src="/app/admin-products/admin-products.controller.js"></script>
+    <script src="/app/admin-add/admin-add.controller.js"></script>
+    <script src="/app/app.config.js"></script>
+  </body>
+</html>
