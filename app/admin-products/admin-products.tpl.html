@@ -26,6 +26,7 @@
           <th st-sort="productUnit">Unidad de Medida</th>
           <th st-sort="price">Precio</th>
           <th st-sort="minOrderQuantity">Orden Mínima</th>
+          <th></th>
         </tr>
         <tr>
           <th colspan="6"><input st-search="" class="form-control" placeholder="Búsqueda global de productos ..." type="text"/></th>
@@ -33,15 +34,21 @@
       </thead>
       <tbody ng-repeat="product in admin.displayedProductsList">
         <tr>
-          <td scope="row">{{ product.productID }}</td>
-          <td>{{ product.description }}</td>
-          <td>{{ product.productUnitQuantity }}</td>
-          <td>{{ product.productUnit }}</td>
-          <td>{{ product.price }}</td>
-          <td>{{ product.minOrderQuantity }}</td>
-          <td>{{ product.base64Img }}</td>
+          <td><a href="#!/admin/product/{{product.productID}}" onaftersave="product.$save()" editable-text="product.productID">{{ product.productID }}</a></td>
+          <td><a href="#!/admin/product/{{product.productID}}" onaftersave="product.$save()" editable-text="product.description" ng-model="admin.newProductModel.description">{{ product.description }}</td>
+          <td><a href="#!/admin/product/{{product.productID}}" onaftersave="product.$save()" editable-text="product.productUnitQuantity">{{ product.productUnitQuantity }}</td>
+          <td><a href="#!/admin/product/{{product.productID}}" onaftersave="product.$save()" editable-text="product.productUnit">{{ product.productUnit }}</td>
+          <td><a href="#!/admin/product/{{product.productID}}" onaftersave="product.$save()" editable-text="product.price">{{ product.price }}</td>
+          <td><a href="#!/admin/product/{{product.productID}}" onaftersave="product.$save()" editable-text="product.minOrderQuantity">{{ product.minOrderQuantity }}</td>
+          <td><a href="#!/admin/product/{{product.productID}}" onaftersave="product.$save()" editable-text="product.base64Img">{{ product.base64Img }}</td>
+          <td>
+            <button type="button" class="btn btn-success btn-xs" ng-click="admin.addItem(product, 1)">
+              Add to Cart
+            </button>
+          </td>
         </tr>
       </tbody>
     </table>
   </div>
 </div>
+    <div shopping-cart-menu></div>
