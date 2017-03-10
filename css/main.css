@@ -1,0 +1,92 @@
+.product-card {
+  padding-bottom: 5em;
+  font-family: 'Titillium Web', sans-serif;
+  text-align: center;
+  font-size: 1.3em;
+}
+
+.product-description {
+  font-size: 1.4em;
+}
+
+.img-product-card {
+  height: 19em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+}
+
+.img-product-card::before {
+  bottom: 0;
+  content: " ";
+  display: block;
+  background-color: #fff;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: all 250ms ease-in-out 0s;
+  z-index: 0;
+}
+
+.img-product-card .product-card-shop {
+  opacity: 0;
+  position: relative;
+  transition: all 350ms ease-in-out 0s;
+  z-index: 1;
+}
+
+.shop-button {
+  border-radius: 8em;
+  font-size: 1.2em;
+  color: #FF4C51;
+  background-color: white;
+  border: 2px solid #FF4C51;
+  margin-top: 7em;
+  margin-left: 0.3em;
+}
+
+.add-to-cart {
+  color: #3B3A3A;
+  margin-top: 10px;
+}
+
+.img-product-card:hover .product-card-shop {
+  opacity: 1;
+}
+
+.img-product-card:hover::before {
+  opacity: 0.9;
+}
+
+.shop-button:hover {
+  background-color: #FF4C51;
+  color: white;
+}
+
+.cart-items {
+  border-radius: 15em;
+  font-size: 1.3em;
+  color: white;
+  background-color: #FF4C51;
+  border: 2px solid #FF4C51;
+}
+
+.cart-items:hover {
+  opacity: 0.6;
+  color: #FFF;
+}
+
+.nav-cart {
+  color: #FF4C51;
+  font-size: 2em;
+  margin-top: 0.4em;
+}
+
+.counting {
+  color: #FF4C51;
+  font-size: 1.5em;
+  margin-top: 0.7em;
+}
