@@ -15,7 +15,7 @@ function ProductService ($resource) {
     },
     {
       save: { method: 'PUT' },
-      create: { method: 'POST' }
+      create: { method: 'POST', url: 'https://hubgourmet.herokuapp.com/products' }
     }
   )
 }
