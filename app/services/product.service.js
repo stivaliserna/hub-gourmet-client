@@ -15,6 +15,7 @@ function ProductService ($resource) {
     },
     {
       save: { method: 'PUT' }
+      create: { method: 'POST' }
     }
   )
 }

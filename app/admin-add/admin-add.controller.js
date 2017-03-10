@@ -18,7 +18,7 @@ function adminAddController ($location, $log, ProductService) {
   vm.addProduct = addProduct
 
   function addProduct (product) {
-    ProductService.save(product).$promise.then(function () {
+    ProductService.create(product).$promise.then(function () {
       vm.newProductModel = null
       $location.url('/admin/products')
     }).catch($log.error)
