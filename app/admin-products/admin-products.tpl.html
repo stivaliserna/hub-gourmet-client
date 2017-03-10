@@ -41,14 +41,8 @@
           <td><a href="#!/admin/product/{{product.productID}}" onaftersave="product.$save()" editable-text="product.price">{{ product.price }}</td>
           <td><a href="#!/admin/product/{{product.productID}}" onaftersave="product.$save()" editable-text="product.minOrderQuantity">{{ product.minOrderQuantity }}</td>
           <td><a href="#!/admin/product/{{product.productID}}" onaftersave="product.$save()" editable-text="product.base64Img">{{ product.base64Img }}</td>
-          <td>
-            <button type="button" class="btn btn-success btn-xs" ng-click="admin.addItem(product, 1)">
-              Add to Cart
-            </button>
-          </td>
         </tr>
       </tbody>
     </table>
   </div>
 </div>
-    <div shopping-cart-menu></div>

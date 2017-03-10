@@ -4,10 +4,11 @@ angular
   .module('hubGourmetApp')
   .controller('adminProductsController', [
     'ProductService',
+    'ShoppingCartService',
     adminProductsController
   ])
 
-function adminProductsController (ProductService) {
+function adminProductsController (ProductService, ShoppingCartService) {
   let vm = this
 
   vm.newProductModel = null
