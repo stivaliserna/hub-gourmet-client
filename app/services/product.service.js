@@ -9,7 +9,7 @@ angular
 
 function ProductService ($resource) {
   return $resource(
-    'https://hubgourmet.herokuapp.com/products/:id',
+    'https://hubgourmet.herokuapp.com/products/:productID',
     {
       productID: '@productID'
     },
