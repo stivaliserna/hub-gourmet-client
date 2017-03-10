@@ -24,7 +24,11 @@
   </thead>
   <tbody>
     <tr ng-repeat="item in checkout.getItems()">
-      <td>{{ item.product.description }}</a></td>
+      <td>
+        <button type="submit" ng-click="checkout.removeItem(item.product)">
+          <i class="glyphicon glyphicon-remove"></i>
+        </button>{{ item.product.description }}
+      </td>
       <td>{{ item.product.price | currency }}</td>
       <td>{{ item.quantity }}</td>
       <td>{{ item.quantity * item.product.price | currency }}</td>

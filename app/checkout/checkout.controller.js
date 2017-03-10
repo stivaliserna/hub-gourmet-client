@@ -12,4 +12,5 @@ function checkoutController (ShoppingCartService) {
 
   vm.getItems = ShoppingCartService.getItems
   vm.total = ShoppingCartService.total
+  vm.removeItem = ShoppingCartService.removeItem
 }

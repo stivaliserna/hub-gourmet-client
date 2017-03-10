@@ -38,7 +38,7 @@ function ShoppingCartService ($log) {
 
   function removeItem (product) {
     let index = items.findIndex(i => i.product.productID === product.productID)
-    item.splice(index, 1)
+    items.splice(index, 1)
   }
 
   function getItems () {
