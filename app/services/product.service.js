@@ -9,10 +9,12 @@ angular
 
 function ProductService ($resource) {
   return $resource(
-    'http://localhost:3001/products',
-    { id: '@id' },
+    'http://localhost:3001/products/:productID',
     {
-      update: { method: 'PUT' }
+      productID: '@productID'
+    },
+    {
+      save: { method: 'PUT' }
     }
   )
 }
