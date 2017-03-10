@@ -1,19 +1,31 @@
-<div class="products-list">
-  <h2>PRODUCTS</h2>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#!/products">HUB GOURMET</a>
+    </div>
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="#!/products">PRODUCTS</a></li>
+      </ul>
+      <div shopping-cart-menu></div>
+    </div>
+  </div>
+</nav>
 
-  <ul class="list-unstyled">
-      <li>
-        <a href="#!/products">PRODUCTS</a>
-      </li>
-   </ul>
-
-  <ul class="list-unstyled">
-    <li ng-repeat="product in products.productsList">
-      {{ product.description }}
-      {{ product.productUnitQuantity + product.productUnit }}
-      {{ product.price }}
-      {{ product.minOrderQuantity }}
-    </li>
-  </ul>
-
-</div>
+<section class="container products-list">
+  <div class="row">
+    <div class="product-card pull-left col-sm-6 col-md-4 img-responsive" ng-repeat="product in products.productsList">
+      <div class="img-product-card" ng-style="{'background-image':'url(../download.jpg)'}">
+        <div class="product-card-shop">
+          <button type="button" class="btn shop-button" ng-click="products.addItem(product, 1)">
+            <i class="glyphicon glyphicon-shopping-cart"></i>
+          </button>
+          <p class="add-to-cart">Añadir al carrito</p>
+        </div>
+      </div>
+      <div class="product-description">{{ product.description }}</div>
+      <div>{{ product.productUnitQuantity + product.productUnit }}</div>
+      <div>{{ product.price | currency }}</div>
+    </div>
+  </div>
+</section>
