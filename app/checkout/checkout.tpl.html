@@ -30,7 +30,14 @@
         </button>{{ item.product.description }}
       </td>
       <td>{{ item.product.price | currency }}</td>
-      <td>{{ item.quantity }}</td>
+      <td>
+        <div class="form-group">
+          <input type="number"
+                 min="1"
+                 class="form-control"
+                 ng-model="item.quantity">
+        </div>
+      </td>
       <td>{{ item.quantity * item.product.price | currency }}</td>
     </tr>
     <tr>
