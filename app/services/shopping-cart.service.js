@@ -4,11 +4,23 @@ angular
   .module('hubGourmetApp')
   .service('ShoppingCartService', [
     '$log',
+    '$rootScope',
+    'localStorageService',
     ShoppingCartService
   ])
 
-function ShoppingCartService ($log) {
-  let items = []
+function ShoppingCartService ($log, $rootScope, localStorageService) {
+  let items = localStorageService.get('shoppingCartItems') || []
+
+  $rootScope.$watch(
+    () => { return items },
+    (newValue) => {
+      if (newValue) {
+        localStorageService.set('shoppingCartItems', newValue)
+      }
+    },
+    true
+  )
 
   return {
     addItem: addItem,

@@ -1,9 +1,10 @@
 /* global angular */
 
 angular.module('hubGourmetApp', [
-  'ngRoute',
-  'ngResource',
-  'smart-table',
+  'LocalStorageModule',
   'naif.base64',
+  'ngResource',
+  'ngRoute',
+  'smart-table',
   'xeditable'
 ])

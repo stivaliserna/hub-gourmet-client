@@ -34,3 +34,8 @@ function routerConfig ($routeProvider) {
    })
    .otherwise('/products')
 }
+
+angular.module('hubGourmetApp').config(function (localStorageServiceProvider) {
+  localStorageServiceProvider.setPrefix('hubGourmetApp')
+})
+
