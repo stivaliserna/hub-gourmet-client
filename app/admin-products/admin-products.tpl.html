@@ -34,7 +34,7 @@
       </thead>
       <tbody ng-repeat="product in admin.displayedProductsList">
         <tr>
-          <td><a href="#!/admin/product/{{product.productID}}" onaftersave="product.$save()" editable-text="product.productID">{{ product.productID }}</a></td>
+          <td>{{ product.productID }}</td>
           <td><a href="#!/admin/product/{{product.productID}}" onaftersave="product.$save()" editable-text="product.description" ng-model="admin.newProductModel.description">{{ product.description }}</td>
           <td><a href="#!/admin/product/{{product.productID}}" onaftersave="product.$save()" editable-text="product.productUnitQuantity">{{ product.productUnitQuantity }}</td>
           <td><a href="#!/admin/product/{{product.productID}}" onaftersave="product.$save()" editable-text="product.productUnit">{{ product.productUnit }}</td>

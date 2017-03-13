@@ -37,17 +37,11 @@
              placeholder="Añadir cantidad del producto">
     </div>
     <div class="form-group">
-    <label for="productUnit">Unidad de medida</label>
-      <select class="form-control" 
-              name="productUnit" 
-              ng-model="add.newProductModel.productUnit">
-        <option>Selecciona la unidad de medida correspondiente</option>
-        <option>g</option>
-        <option>l</option>
-        <option>m3</option>
-        <option>und</option>
-      </select>
-    </div>
+    <label for="productUnit">Unidad de medida</label><br>
+    <select class="form-control" 
+            ng-model="add.newProductModel.productUnit" 
+            ng-options="unit.unit as unit.label for unit in add.measureUnits">
+    </select>
     </div>
     <div class="form-group">
       <label for="price">Precio</label>
