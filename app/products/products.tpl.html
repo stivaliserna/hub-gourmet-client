@@ -3,7 +3,7 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="#!/products">HUB GOURMET</a>
     </div>
-    <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li><a href="#!/products">PRODUCTS</a></li>
       </ul>
@@ -14,7 +14,7 @@
 
 <section class="container products-list">
   <div class="row">
-    <div class="product-card pull-left col-md-4 img-responsive" ng-repeat="product in products.productsList">
+    <div class="product-card pull-left col-xs-12 col-md-6 col-lg-4" ng-repeat="product in products.productsList">
       <div class="img-product-card" ng-style="{'background-image':'url(../download.jpg)'}">
         <div class="product-card-shop">
           <button type="button" class="btn shop-button" ng-click="products.addItem(product, 1)">
