@@ -1,0 +1,48 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#!/admin/products">HUB GOURMET</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="#!/admin/products">PRODUCTS</a></li>
+        <li><a href="#!/admin/orders">ÓRDENES DE COMRPA</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="admin-orders-list">
+  <h2>ÓRDENES DE COMPRA</h2>
+  <div class="table-responsive">
+    <table st-table="order.displayedOrdersList" st-safe-src="order.ordersList" class="table table-striped">
+      <thead>
+        <tr>
+          <th st-sort="name" st-sort-default="true">Nombre</th>
+          <th st-sort="surname">Apellido</th>
+          <th st-sort="identificationType">Tipo de identificación</th>
+          <th st-sort="identificationNumber">Número de identificación</th>
+          <th st-sort="mail">Correo electrónico</th>
+          <th st-sort="telephone">Teléfono</th>
+          <!-- <th st-sort="items">Producto</th>
+          <th st-sort="items">Cantidad</th> -->
+        </tr>
+        <tr>
+          <th colspan="6"><input st-search="" class="form-control" placeholder="Búsqueda global de órdenes de compra ..." type="text"/></th>
+        </tr>
+      </thead>
+      <tbody ng-repeat="order in order.ordersList">
+        <tr>
+          <td>{{ order.name }}</td>
+          <td>{{ order.surname }}</td>
+          <td>{{ order.identificationType }}</td>
+          <td>{{ order.identificationNumber }}</td>
+          <td>{{ order.mail }}</td>
+          <td>{{ order.telephone }}</td>
+          <!-- <td>{{ order.items.product }}</td>
+          <td>{{ order.items.quantity }}</td> -->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

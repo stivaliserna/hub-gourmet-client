@@ -17,10 +17,10 @@ function routerConfig ($routeProvider) {
      controller: 'checkoutController',
      controllerAs: 'checkout'
    })
-   .when('/admin/products', {
-     templateUrl: 'app/admin-products/admin-products.tpl.html',
-     controller: 'adminProductsController',
-     controllerAs: 'admin'
+   .when('/order', {
+     templateUrl: 'app/admin-sent-orders/admin-sent-orders.tpl.html',
+     controller: 'sentOrdersController',
+     controllerAs: 'order'
    })
    .when('/admin/product/add', {
      templateUrl: 'app/admin-add/admin-add.tpl.html',
@@ -31,6 +31,11 @@ function routerConfig ($routeProvider) {
      templateUrl: 'app/admin-products/admin-products.tpl.html',
      controller: 'adminProductsController',
      controllerAs: 'admin'
+   })
+   .when('/admin/orders', {
+     templateUrl: 'app/admin-sent-orders/admin-sent-orders.tpl.html',
+     controller: 'sentOrdersController',
+     controllerAs: 'order'
    })
    .otherwise('/products')
 }
