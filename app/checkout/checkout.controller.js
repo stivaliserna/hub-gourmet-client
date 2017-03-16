@@ -34,8 +34,9 @@ function checkoutController (ShoppingCartService, OrderService, $log, $location)
       }
     })
     OrderService.create(order).$promise.then(function () {
-      vm.orderSucceded = true
       vm.newOrderModel = null
+      vm.orderSucceded = true
+      ShoppingCartService.clearItems()
     }).catch($log.error)
   }
 }

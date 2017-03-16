@@ -27,6 +27,7 @@ function ShoppingCartService ($log, $rootScope, localStorageService) {
     removeItem: removeItem,
     count: count,
     getItems: getItems,
+    clearItems: clearItems,
     increaseQuantity: increaseQuantity,
     total: total
   }
@@ -59,6 +60,10 @@ function ShoppingCartService ($log, $rootScope, localStorageService) {
 
   function count () {
     return items.reduce((acc, val) => acc + val.quantity, 0)
+  }
+
+  function clearItems () {
+    return items.splice(0)
   }
 
   function increaseQuantity (product, amount = 1) {
