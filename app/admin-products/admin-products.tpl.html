@@ -35,12 +35,12 @@
       <tbody ng-repeat="product in admin.displayedProductsList">
         <tr>
           <td>{{ product.productID }}</td>
-          <td><a href="#!/admin/product/{{product.productID}}" onaftersave="product.$save()" editable-text="product.description" ng-model="admin.newProductModel.description">{{ product.description }}</td>
-          <td><a href="#!/admin/product/{{product.productID}}" onaftersave="product.$save()" editable-text="product.productUnitQuantity">{{ product.productUnitQuantity }}</td>
-          <td><a href="#!/admin/product/{{product.productID}}" onaftersave="product.$save()" editable-text="product.productUnit">{{ product.productUnit }}</td>
-          <td><a href="#!/admin/product/{{product.productID}}" onaftersave="product.$save()" editable-text="product.price">{{ product.price }}</td>
-          <td><a href="#!/admin/product/{{product.productID}}" onaftersave="product.$save()" editable-text="product.minOrderQuantity">{{ product.minOrderQuantity }}</td>
-          <td><a href="#!/admin/product/{{product.productID}}" onaftersave="product.$save()" editable-text="product.base64Img">{{ product.base64Img }}</td>
+          <td><a onaftersave="product.$save()" editable-text="product.description" ng-model="admin.newProductModel.description">{{ product.description }}</td>
+          <td><a onaftersave="product.$save()" editable-text="product.productUnitQuantity">{{ product.productUnitQuantity }}</td>
+          <td><a onaftersave="product.$save()" editable-text="product.productUnit">{{ product.productUnit }}</td>
+          <td><a onaftersave="product.$save()" editable-text="product.price">{{ product.price }}</td>
+          <td><a onaftersave="product.$save()" editable-text="product.minOrderQuantity">{{ product.minOrderQuantity }}</td>
+          <td><a onaftersave="product.$save()" editable-text="product.base64Img">{{ product.base64Img }}</td>
         </tr>
       </tbody>
     </table>

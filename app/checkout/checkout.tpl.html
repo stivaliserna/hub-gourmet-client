@@ -14,13 +14,12 @@
 
  <table class="table">
   <thead>
-  <div>
-        <tr>
-          <th>Producto</th>
-          <th>Precio</th>
-          <th>Cantidad</th>
-          <th>Total</th>
-        </tr>
+    <tr>
+      <th>Producto</th>
+      <th>Precio</th>
+      <th>Cantidad</th>
+      <th>Total</th>
+    </tr>
   </thead>
   <tbody>
     <tr ng-repeat="item in checkout.getItems()">
@@ -47,3 +46,54 @@
       <td>{{ checkout.total() | currency }}</td>
     </tr>
   </tbody>
+</table>
+
+<div class="admin-add-order">
+  <form class="form" ng-submit="checkout.addOrder(checkout.newOrderModel)">
+    <div class="form-group">
+      <label for="name">Nombre</label>
+      <input type="text"
+             class="form-control"  
+             name="name" 
+             ng-model="checkout.newOrderModel.name" 
+             placeholder="Ingrese su nombre">
+    </div>
+    <div class="form-group">
+      <label for="surname">Apellido</label>
+      <input type="text"
+             class="form-control"  
+             name="surname" 
+             ng-model="checkout.newOrderModel.surname" 
+             placeholder="Ingrese su Apellido">
+    </div>
+    <div class="form-group">
+      <label for="identification">Identificación</label>
+      <select class="form-control" 
+              ng-model="checkout.newOrderModel.identificationType" 
+              ng-options="type for type in ['V', 'E', 'J']">
+      </select>
+      <input type="text"
+             class="form-control"  
+             name="identificationNumber" 
+             ng-model="checkout.newOrderModel.identificationNumber" 
+             placeholder="Ingrese su número de identificación">
+    </div>
+    <div class="form-group">
+      <label for="mail">Correo Electrónico</label>
+      <input type="text"
+             class="form-control"  
+             name="mail" 
+             ng-model="checkout.newOrderModel.mail" 
+             placeholder="Ingrese su correo electrónico">
+    </div>
+    <div class="form-group">
+      <label for="telephone">Telefóno</label>
+      <input type="text"
+             class="form-control"  
+             name="telephone" 
+             ng-model="checkout.newOrderModel.telephone" 
+             placeholder="Ingrese su teléfono">
+    </div>
+    <button type="submit">Añadir</button>
+  </form>
+</div>

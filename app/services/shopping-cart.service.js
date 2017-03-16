@@ -39,7 +39,7 @@ function ShoppingCartService ($log, $rootScope, localStorageService) {
   }
 
   function addItem (product, quantity = 1) {
-    let item = items.find(item => item.product.productID === product.productID)
+    let item = items.find(item => item.product._id === product._id)
 
     if (item) {
       increaseQuantity(product, 1)
@@ -49,7 +49,7 @@ function ShoppingCartService ($log, $rootScope, localStorageService) {
   }
 
   function removeItem (product) {
-    let index = items.findIndex(i => i.product.productID === product.productID)
+    let index = items.findIndex(i => i.product._id === product._id)
     items.splice(index, 1)
   }
 
@@ -62,7 +62,7 @@ function ShoppingCartService ($log, $rootScope, localStorageService) {
   }
 
   function increaseQuantity (product, amount = 1) {
-    let index = items.findIndex(i => i.product.productID === product.productID)
+    let index = items.findIndex(i => i.product._id === product._id)
     items[index].quantity += amount
   }
 

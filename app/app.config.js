@@ -27,7 +27,7 @@ function routerConfig ($routeProvider) {
      controller: 'adminAddController',
      controllerAs: 'add'
    })
-   .when('/admin/product/edit/:productID', {
+   .when('/admin/product/edit/:_id', {
      templateUrl: 'app/admin-products/admin-products.tpl.html',
      controller: 'adminProductsController',
      controllerAs: 'admin'
