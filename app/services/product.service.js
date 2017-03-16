@@ -9,13 +9,15 @@ angular
 
 function ProductService ($resource) {
   return $resource(
-    'http://localhost:3001/products/:_id',
+    'https://hubgourmet.herokuapp.com/products/:_id',
+    /* 'http://localhost:3001/products/:_id', */
     {
       _id: '@_id'
     },
     {
       save: { method: 'PUT' },
-      create: { method: 'POST', url: 'http://localhost:3001/products' }
+      create: { method: 'POST', url: 'https://hubgourmet.herokuapp.com/products' }
+      /* create: { method: 'POST', url: 'http://localhost:3001/products' } */
     }
   )
 }
