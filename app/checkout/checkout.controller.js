@@ -12,7 +12,6 @@ angular
   ])
 
 function checkoutController (ShoppingCartService, OrderService, $log, $location) {
-  console.log('controller loaded')
   var vm = this
 
   vm.getItems = ShoppingCartService.getItems
@@ -21,12 +20,12 @@ function checkoutController (ShoppingCartService, OrderService, $log, $location)
   vm.addItem = ShoppingCartService.addItem
 
   vm.newOrderModel = null
+  vm.orderSucceded = false
 
   // expose functions
   vm.addOrder = addOrder
 
   function addOrder (order) {
-    console.log('sending')
     order.items = ShoppingCartService.getItems().map(item => {
       return {
         price: item.product.price,
@@ -35,8 +34,8 @@ function checkoutController (ShoppingCartService, OrderService, $log, $location)
       }
     })
     OrderService.create(order).$promise.then(function () {
+      vm.orderSucceded = true
       vm.newOrderModel = null
-      $location.url('/checkout')
     }).catch($log.error)
   }
 }
