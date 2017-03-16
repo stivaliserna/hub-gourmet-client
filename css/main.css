@@ -90,3 +90,22 @@
   font-size: 1.5em;
   margin-top: 0.7em;
 }
+
+/*Checkout success message after form submit*/
+
+.order-success {
+  margin-top: 2.5em;
+  text-align: center;
+}
+
+.success-button {
+  background-color: #FF4C51;
+  padding: 0.5em;
+  font-size: 1.5em;
+  color: #FFF;
+  border-radius: 0.2em;
+}
+
+.success-button a {
+  color: #FFF;
+}

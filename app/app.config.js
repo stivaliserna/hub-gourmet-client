@@ -22,6 +22,11 @@ function routerConfig ($routeProvider) {
      controller: 'sentOrdersController',
      controllerAs: 'order'
    })
+   .when('/admin/products', {
+     templateUrl: 'app/admin-products/admin-products.tpl.html',
+     controller: 'adminProductsController',
+     controllerAs: 'admin'
+   })
    .when('/admin/product/add', {
      templateUrl: 'app/admin-add/admin-add.tpl.html',
      controller: 'adminAddController',
