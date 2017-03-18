@@ -20,7 +20,6 @@ function checkoutController (ShoppingCartService, OrderService, $log, $location)
   vm.addItem = ShoppingCartService.addItem
 
   vm.newOrderModel = null
-  vm.orderSucceded = false
 
   // expose functions
   vm.addOrder = addOrder
@@ -33,10 +32,10 @@ function checkoutController (ShoppingCartService, OrderService, $log, $location)
         product: item.product._id
       }
     })
-    OrderService.create(order).$promise.then(function () {
+    OrderService.create(order).$promise.then(function (data) {
       vm.newOrderModel = null
-      vm.orderSucceded = true
       ShoppingCartService.clearItems()
+      $location.url('/orders/' + data._id)
     }).catch($log.error)
   }
 }

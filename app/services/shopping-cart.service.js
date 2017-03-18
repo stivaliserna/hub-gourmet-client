@@ -63,7 +63,7 @@ function ShoppingCartService ($log, $rootScope, localStorageService) {
   }
 
   function clearItems () {
-    return items.splice(0)
+    items.splice(0)
   }
 
   function increaseQuantity (product, amount = 1) {
