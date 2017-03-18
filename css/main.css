@@ -1,3 +1,65 @@
+/*Navbar*/
+
+ul.menu {
+  list-style: none;
+  margin: 0;
+  padding:0;
+  text-align:center;
+  font: 1.2em 'Titillium Web', sans-serif;
+  margin-top: 2em;
+  margin-left: 15em;
+}
+
+ul.menu li {
+  display: inline;
+  margin-right:25px; /* spacing between each menu item */
+}
+
+ul.menu li a {
+  position: relative;
+  display: inline-block;
+  color: black;
+  padding: 2px 3px;
+  padding-bottom: 8px; /*spacing between each menu item and underline beneath it */
+  text-decoration: none;
+  margin-bottom: 20px; /* spacing between A elements, relevant when menu becomes multi-lined */
+  letter-spacing: .1em;
+}
+
+ul.menu li a:after {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #FF4C51;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  -wekkit-transition: all .3s;
+  transition: all .3s;
+}
+
+ul.menu li a:hover:after {
+  width: 100%; /* increase underline width to 100% */
+  opacity: 1;
+}
+
+.nav-cart {
+  color: #FF4C51;
+  font-size: 1.5em;
+  margin-right: 8em;
+}
+
+.counting {
+  color: #FF4C51;
+  font-size: 1em;
+  margin-top: 0.5em;
+}
+
+/*Products template*/
+
 .product-card {
   padding-bottom: 5em;
   font-family: 'Titillium Web', sans-serif;
@@ -77,36 +139,5 @@
 
 .cart-items:hover {
   opacity: 0.6;
-  color: #FFF;
-}
-
-.nav-cart {
-  color: #FF4C51;
-  font-size: 2em;
-  margin-top: 0.4em;
-}
-
-.counting {
-  color: #FF4C51;
-  font-size: 1.5em;
-  margin-top: 0.7em;
-}
-
-/*Checkout success message after form submit*/
-
-.order-success {
-  margin-top: 2.5em;
-  text-align: center;
-}
-
-.success-button {
-  background-color: #FF4C51;
-  padding: 0.5em;
-  font-size: 1.5em;
-  color: #FFF;
-  border-radius: 0.2em;
-}
-
-.success-button a {
   color: #FFF;
 }

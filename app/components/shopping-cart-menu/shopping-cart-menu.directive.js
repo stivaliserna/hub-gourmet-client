@@ -7,15 +7,9 @@ angular
     shoppingCartMenu
   ])
 
-let template = `
-<a href="#!/checkout">
-  <i class="glyphicon glyphicon-shopping-cart pull-right nav-cart"></i><span class="counting pull-right">{{ cart.count() }}</span>
-</a>
-`
-
 function shoppingCartMenu (ShoppingCartService) {
   return {
-    template: template,
+    templateUrl: 'app/components/shopping-cart-menu/shopping-cart-menu.directive.tpl.html',
     controller: ShppingCartMenuController,
     controllerAs: 'cart'
   }
