@@ -1,0 +1,5 @@
+<div>{{ clientOrder.orderModel.name}}</div>
+<div ng-repeat="item in clientOrder.orderModel.items">
+  <div>{{ item.product.description }}</div>
+  <div>{{ item.quantity }}</div>
+</div>

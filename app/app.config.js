@@ -17,22 +17,22 @@ function routerConfig ($routeProvider) {
      controller: 'checkoutController',
      controllerAs: 'checkout'
    })
-   .when('/order', {
-     templateUrl: 'app/admin-sent-orders/admin-sent-orders.tpl.html',
-     controller: 'sentOrdersController',
-     controllerAs: 'order'
+   .when('/orders/:_id', {
+     templateUrl: 'app/client-order/client-order.tpl.html',
+     controller: 'clientOrderController',
+     controllerAs: 'clientOrder'
    })
    .when('/admin/products', {
      templateUrl: 'app/admin-products/admin-products.tpl.html',
      controller: 'adminProductsController',
      controllerAs: 'admin'
    })
-   .when('/admin/product/add', {
+   .when('/admin/products/add', {
      templateUrl: 'app/admin-add/admin-add.tpl.html',
      controller: 'adminAddController',
      controllerAs: 'add'
    })
-   .when('/admin/product/edit/:_id', {
+   .when('/admin/products/edit/:_id', {
      templateUrl: 'app/admin-products/admin-products.tpl.html',
      controller: 'adminProductsController',
      controllerAs: 'admin'

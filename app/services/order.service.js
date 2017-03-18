@@ -9,8 +9,8 @@ angular
 
 function OrderService ($resource) {
   return $resource(
-    'https://hubgourmet.herokuapp.com/orders/:_id',
-    /* 'http://localhost:3001/orders/:_id', */
+     'https://hubgourmet.herokuapp.com/orders/:_id',
+/*     'http://localhost:3001/orders/:_id', */
     {
       _id: '@_id'
     },
