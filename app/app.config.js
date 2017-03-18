@@ -49,3 +49,12 @@ angular.module('hubGourmetApp').config(function (localStorageServiceProvider) {
   localStorageServiceProvider.setPrefix('hubGourmetApp')
 })
 
+angular.module('hubGourmetApp').config(['$provide', function ($provide) {
+  $provide.decorator('$locale', ['$delegate', function ($delegate) {
+    $delegate.NUMBER_FORMATS.PATTERNS[1].negPre = 'Bs. -'
+    $delegate.NUMBER_FORMATS.PATTERNS[1].negSuf = ''
+    $delegate.NUMBER_FORMATS.PATTERNS[1].posPre = 'Bs. '
+    $delegate.NUMBER_FORMATS.PATTERNS[1].posSuf = ''
+    return $delegate
+  }])
+}])
