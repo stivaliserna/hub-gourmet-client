@@ -13,7 +13,6 @@ function authService ($log, lock, authManager, localStorageService) {
   // This method is called from app.run.js
   function registerAuthenticationListener () {
     lock.on('authenticated', function (authResult) {
-      $log.log('User authenticated: ', authResult)
       localStorageService.set('id_token', authResult.idToken)
       authManager.authenticate()
     })

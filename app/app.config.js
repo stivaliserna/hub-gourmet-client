@@ -16,6 +16,11 @@ function routerConfig ($routeProvider) {
      controller: 'LoginController',
      controllerAs: 'login'
    })
+   .when('/main', {
+     controller: 'mainController',
+     controllerAs: 'main',
+     template: ''
+   })
    .when('/products', {
      templateUrl: 'app/products/products.tpl.html',
      controller: 'productsController',
@@ -51,7 +56,7 @@ function routerConfig ($routeProvider) {
      controller: 'sentOrdersController',
      controllerAs: 'order'
    })
-   .otherwise('/products')
+   .otherwise('/main')
 }
 
 localStorageConfig.$inject = ['localStorageServiceProvider']

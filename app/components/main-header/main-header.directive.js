@@ -12,7 +12,7 @@ function mainHeader (ShoppingCartService, authService) {
   return {
     templateUrl: 'app/components/main-header/main-header.directive.tpl.html',
     controller: mainHeaderController,
-    controllerAs: 'cart'
+    controllerAs: 'mainHeader'
   }
 
   function mainHeaderController () {
