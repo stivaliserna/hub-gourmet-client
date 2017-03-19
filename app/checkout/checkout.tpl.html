@@ -1,43 +1,50 @@
 <div main-header></div>
 
- <table class="table">
-  <thead>
-    <tr>
-      <th>Producto</th>
-      <th>Precio</th>
-      <th>Cantidad</th>
-      <th>Total</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat="item in checkout.getItems()">
-      <td>
-        <button type="submit" ng-click="checkout.removeItem(item.product)">
-          <i class="glyphicon glyphicon-remove"></i>
-        </button>{{ item.product.description }}
-      </td>
-      <td>{{ item.product.price | currency }}</td>
-      <td>
-        <div class="form-group">
-          <input type="number"
-                 min="1"
-                 class="form-control"
-                 ng-model="item.quantity">
-        </div>
-      </td>
-      <td>{{ item.quantity * item.product.price | currency }}</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>{{ checkout.total() | currency }}</td>
-    </tr>
-  </tbody>
-</table>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="th-remove"></th>
+        <th class="left">Producto</th>
+        <th class="right">Precio</th>
+        <th class="right">Cantidad</th>
+        <th class="right">Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="item in checkout.getItems()">
+        <td class="center">
+          <button type="submit" ng-click="checkout.removeItem(item.product)">
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
+          </button>
+        </td>
+        <td>{{ item.product.description }}</td>
+        <td class="right">{{ item.product.price | currency }}</td>
+        <td class="right">
+          <div class="form-group pull-right">
+            <input type="number"
+                   min="1"
+                   class="form-control"
+                   ng-model="item.quantity">
+          </div>
+        </td>
+        <td class="right">{{ item.quantity * item.product.price | currency }}</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="right">{{ checkout.total() | currency }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="reserve pull-right" type="button" ng-click="showForm=true">RESERVAR</button>
+</div>
 
-<div class="admin-add-order">
-  <form class="form" ng-submit="checkout.addOrder(checkout.newOrderModel)">
+
+<div class="container add-order">
+  <form class="form showing" ng-submit="checkout.addOrder(checkout.newOrderModel)" ng-show='showForm'>
     <div class="form-group">
       <label for="name">Nombre</label>
       <input type="text"
@@ -54,17 +61,24 @@
              ng-model="checkout.newOrderModel.surname" 
              placeholder="Ingrese su Apellido">
     </div>
-    <div class="form-group">
-      <label for="identification">Identificación</label>
-      <select class="form-control" 
-              ng-model="checkout.newOrderModel.identificationType" 
-              ng-options="type for type in ['V', 'E', 'J']">
-      </select>
-      <input type="text"
-             class="form-control"  
-             name="identificationNumber" 
-             ng-model="checkout.newOrderModel.identificationNumber" 
-             placeholder="Ingrese su número de identificación">
+    <div class="form-group row">
+      <div class="col-xs-12">
+        <label for="identification">Identificación</label>
+      </div>
+      <div class="col-sm-2">
+        <select class="form-control" 
+                ng-model="checkout.newOrderModel.identificationType" 
+                ng-options="type for type in ['V', 'E', 'J']">
+        </select>
+      </div>
+      <div class="col-sm-10">
+        
+        <input type="text"
+               class="form-control"  
+               name="identificationNumber" 
+               ng-model="checkout.newOrderModel.identificationNumber" 
+               placeholder="Ingrese su número de identificación">
+      </div>
     </div>
     <div class="form-group">
       <label for="mail">Correo Electrónico</label>
@@ -82,6 +96,7 @@
              ng-model="checkout.newOrderModel.telephone" 
              placeholder="Ingrese su teléfono">
     </div>
-    <button type="submit">Añadir</button>
+    <button class="order-button pull-right" type="submit">Añadir</button>
   </form>
 </div>
+
