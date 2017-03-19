@@ -7,6 +7,11 @@ angular.module('hubGourmetApp').config([
 
 function routerConfig ($routeProvider) {
   $routeProvider
+   .when('/login', {
+     templateUrl: 'app/components/login/login.tpl.html',
+     controller: 'LoginController',
+     controllerAs: 'login'
+   })
    .when('/products', {
      templateUrl: 'app/products/products.tpl.html',
      controller: 'productsController',
@@ -49,7 +54,9 @@ angular.module('hubGourmetApp').config(function (localStorageServiceProvider) {
   localStorageServiceProvider.setPrefix('hubGourmetApp')
 })
 
-angular.module('hubGourmetApp').config(['$provide', function ($provide) {
+angular
+.module('hubGourmetApp')
+.config(['$provide', function ($provide) {
   $provide.decorator('$locale', ['$delegate', function ($delegate) {
     $delegate.NUMBER_FORMATS.PATTERNS[1].negPre = 'Bs. -'
     $delegate.NUMBER_FORMATS.PATTERNS[1].negSuf = ''
@@ -58,3 +65,20 @@ angular.module('hubGourmetApp').config(['$provide', function ($provide) {
     return $delegate
   }])
 }])
+
+angular
+.module('hubGourmetApp')
+.config(function (lockProvider, jwtOptionsProvider) {
+  lockProvider.init({
+    clientID: 'NXVJxodYA5uc0slHzcrFBY1XRSQokdd4',
+    domain: 'hubgourmet.auth0.com',
+    options: {
+      _idTokenVerification: false
+    }
+  })
+  jwtOptionsProvider.config({
+    tokenGetter: function () {
+      return localStorage.getItem('id_token')
+    }
+  })
+})

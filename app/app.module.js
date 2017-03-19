@@ -6,5 +6,7 @@ angular.module('hubGourmetApp', [
   'ngResource',
   'ngRoute',
   'smart-table',
-  'xeditable'
+  'xeditable',
+  'auth0.lock',
+  'angular-jwt'
 ])
