@@ -1,4 +1,4 @@
-.table {
+.table-checkout {
   margin-top: 2em;
   font-family: 'Titillium Web', sans-serif;
   table-layout: fixed;
@@ -49,7 +49,7 @@
   width: 80px;
 }
 
-.table input {
+.table-checkout input {
   background-color: #f6f6f6;
   border-radius: 0;
   border: none;
@@ -58,13 +58,13 @@
   text-align: center;
 }
 
-.table button {
+.table-checkout button {
   background-color: #FFF;
   border: none;
 
 }
 
-.table button i {
+.table-checkout button i {
   color: black;
   font-size: 1.3em;
 }

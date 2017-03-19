@@ -4,10 +4,11 @@ angular
   .module('hubGourmetApp')
   .directive('mainHeader', [
     'ShoppingCartService',
+    'authService',
     mainHeader
   ])
 
-function mainHeader (ShoppingCartService) {
+function mainHeader (ShoppingCartService, authService) {
   return {
     templateUrl: 'app/components/main-header/main-header.directive.tpl.html',
     controller: mainHeaderController,
@@ -16,5 +17,7 @@ function mainHeader (ShoppingCartService) {
 
   function mainHeaderController () {
     let vm = this
+
+    vm.authService = authService
   }
 }
