@@ -1,10 +1,14 @@
 /* global angular */
 
-angular.module('hubGourmetApp').config([
-  '$routeProvider',
-  routerConfig
-])
+angular
+  .module('hubGourmetApp')
+  .config(localStorageConfig)
+  .config(routerConfig)
+  .config(configCurrencyLocale)
+  .config(authConfig)
+  .config(httpConfig)
 
+routerConfig.$inject = ['$routeProvider']
 function routerConfig ($routeProvider) {
   $routeProvider
    .when('/login', {
@@ -50,13 +54,13 @@ function routerConfig ($routeProvider) {
    .otherwise('/products')
 }
 
-angular.module('hubGourmetApp').config(function (localStorageServiceProvider) {
+localStorageConfig.$inject = ['localStorageServiceProvider']
+function localStorageConfig (localStorageServiceProvider) {
   localStorageServiceProvider.setPrefix('hubGourmetApp')
-})
+}
 
-angular
-.module('hubGourmetApp')
-.config(['$provide', function ($provide) {
+configCurrencyLocale.$inject = ['$provide']
+function configCurrencyLocale ($provide) {
   $provide.decorator('$locale', ['$delegate', function ($delegate) {
     $delegate.NUMBER_FORMATS.PATTERNS[1].negPre = 'Bs. -'
     $delegate.NUMBER_FORMATS.PATTERNS[1].negSuf = ''
@@ -64,11 +68,10 @@ angular
     $delegate.NUMBER_FORMATS.PATTERNS[1].posSuf = ''
     return $delegate
   }])
-}])
+}
 
-angular
-.module('hubGourmetApp')
-.config(function (lockProvider, jwtOptionsProvider) {
+authConfig.$inject = ['lockProvider', 'jwtOptionsProvider']
+function authConfig (lockProvider, jwtOptionsProvider) {
   lockProvider.init({
     clientID: 'NXVJxodYA5uc0slHzcrFBY1XRSQokdd4',
     domain: 'hubgourmet.auth0.com',
@@ -76,9 +79,15 @@ angular
       _idTokenVerification: false
     }
   })
+
   jwtOptionsProvider.config({
     tokenGetter: function () {
-      return localStorage.getItem('id_token')
+      return localStorage.getItem('hubGourmetApp.id_token')
     }
   })
-})
+}
+
+httpConfig.$inject = ['$httpProvider']
+function httpConfig ($httpProvider) {
+  $httpProvider.interceptors.push('authInterceptor')
+}
