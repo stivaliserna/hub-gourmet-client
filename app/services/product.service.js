@@ -4,20 +4,19 @@ angular
   .module('hubGourmetApp')
   .service('ProductService', [
     '$resource',
+    'API_BASE_URL',
     ProductService
   ])
 
-function ProductService ($resource) {
+function ProductService ($resource, API_BASE_URL) {
   return $resource(
-      'https://hubgourmet.herokuapp.com/products/:_id',
-      // 'http://localhost:3001/products/:_id',
+      API_BASE_URL + '/products/:_id',
     {
       _id: '@_id'
     },
     {
       save: { method: 'PUT' },
-      create: { method: 'POST', url: 'https://hubgourmet.herokuapp.com/products' }
-      // create: { method: 'POST', url: 'http://localhost:3001/products' }
+      create: { method: 'POST', url: API_BASE_URL + '/products' }
     }
   )
 }
