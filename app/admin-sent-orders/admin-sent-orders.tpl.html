@@ -27,7 +27,7 @@
           <td class="left">{{ order.identificationType }}</td>
           <td class="right">{{ order.identificationNumber }}</td>
           <td class="right">{{ order.telephone }}</td>
-          <td class="right"><a ng-href="/orders/{{order._id}}">Ver orden</a></td>
+          <td class="right"><a ng-href="#!/orders/{{order._id}}">Ver orden</a></td>
           <td class="right">{{ orderList.calculateQuantity(order.items) }}</td>
           <td class="right">{{ orderList.calculateTotalAmount(order.items) }}</td>
         </tr>
