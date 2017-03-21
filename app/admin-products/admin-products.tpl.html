@@ -1,36 +1,90 @@
 <div main-header></div>
 
-<div class="admin-products-list">
-  <h2>INVENTORY</h2>
-  <a href="#!/admin/products/add"><button type="submit" class="btn btn-sm btn-success">
-    <i class="glyphicon glyphicon-plus">
-    </i> Añadir Producto
-  </button></a>
+<div class="container admin-products-list">
+  <div><a class="add-link" href="#!/admin/products/add">
+    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+    <p>Añadir producto</p>
+  </a></div>
   <div class="table-responsive">
-    <table st-table="admin.displayedProductsList" st-safe-src="admin.productsList" class="table table-striped">
+    <table st-table="admin.displayedProductsList" st-safe-src="admin.productsList" class="table table-hover table-bordered">
       <thead>
         <tr>
-          <th st-sort="productID" st-sort-default="true">Referencia</th>
-          <th st-sort="description">Producto</th>
-          <th st-sort="productUnitQuantity">Cantidad</th>
-          <th st-sort="productUnit">Unidad de Medida</th>
-          <th st-sort="price">Precio</th>
-          <th st-sort="minOrderQuantity">Orden Mínima</th>
-          <th></th>
+          <th colspan="7"><input st-search="" class="search-input form-control" placeholder="Búsqueda global de productos ..." type="text"/></th>
         </tr>
         <tr>
-          <th colspan="6"><input st-search="" class="form-control" placeholder="Búsqueda global de productos ..." type="text"/></th>
+          <th class="left" st-sort="productID" st-sort-default="true">Referencia</th>
+          <th class="left" st-sort="description">Producto</th>
+          <th class="right" st-sort="productUnitQuantity">Cantidad</th>
+          <th class="right" st-sort="productUnit">Unidad de Medida</th>
+          <th class="right" st-sort="price">Precio</th>
+          <th class="center" st-sort="">Imagen</th>
+          <th class="right" st-sort="minOrderQuantity">Orden Mínima</th>
         </tr>
       </thead>
       <tbody ng-repeat="product in admin.displayedProductsList">
         <tr>
-          <td>{{ product.productID }}</td>
-          <td><a onaftersave="product.$save()" editable-text="product.description" ng-model="admin.newProductModel.description">{{ product.description }}</td>
-          <td><a onaftersave="product.$save()" editable-text="product.productUnitQuantity">{{ product.productUnitQuantity }}</td>
-          <td><a onaftersave="product.$save()" editable-text="product.productUnit">{{ product.productUnit }}</td>
-          <td><a onaftersave="product.$save()" editable-text="product.price">{{ product.price }}</td>
-          <td><a onaftersave="product.$save()" editable-text="product.minOrderQuantity">{{ product.minOrderQuantity }}</td>
-          <td><a onaftersave="product.$save()" editable-text="product.base64Img">{{ product.base64Img }}</td>
+          <td class="left" >{{ product.productID }}</td>
+          <td class="left"  
+              buttons="no" 
+              onaftersave="product.$save()" 
+              editable-text="product.description" 
+              ng-model="admin.newProductModel.description">
+              <a href>
+                <div>
+                  {{ product.description }}
+                  <i class="fa fa-pencil pull-right" aria-hidden="true"></i>
+                </div>
+              </a>
+          </td>
+          <td class="right" 
+              buttons="no" 
+              onaftersave="product.$save()" 
+              editable-text="product.productUnitQuantity">
+              <a href>
+                <div>
+                  {{ product.productUnitQuantity }}
+                  <i class="fa fa-pencil pull-left" aria-hidden="true"></i>
+                </div>
+              </a>
+          </td>
+          <td class="right" 
+              buttons="no" 
+              onaftersave="product.$save()" 
+              editable-text="product.productUnit">
+              <a href>
+                <div>
+                  {{ product.productUnit }}
+                  <i class="fa fa-pencil pull-left" aria-hidden="true"></i>
+                </div>
+              </a>
+          </td>
+          <td class="right" 
+              buttons="no" 
+              onaftersave="product.$save()" 
+              editable-text="product.price">
+              <a href>
+                <div>
+                  {{ product.price }}
+                  <i class="fa fa-pencil pull-left" aria-hidden="true"></i>
+                </div>
+              </a>
+          </td>
+          <td onaftersave="product.$save()"
+              buttons="no"
+              editable-text="product.base64Img">
+              {{ product.base64Img }}
+          </td>
+          <td class="right" 
+              buttons="no" 
+              onaftersave="product.$save()" 
+              editable-text="product.minOrderQuantity">
+              <a href>
+                <div>
+                  {{ product.minOrderQuantity }}
+                  <i class="fa fa-pencil pull-left" aria-hidden="true"></i>
+                </div>
+              </a>
+          </td>
         </tr>
       </tbody>
     </table>
