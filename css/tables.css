@@ -42,3 +42,7 @@
   font-family: 'Titillium Web', sans-serif;
   table-layout: fixed;
 }
+
+.fa-caret-down {
+  color: #FF4C51;
+}

@@ -54,7 +54,7 @@ function routerConfig ($routeProvider) {
    .when('/admin/orders', {
      templateUrl: 'app/admin-sent-orders/admin-sent-orders.tpl.html',
      controller: 'sentOrdersController',
-     controllerAs: 'order'
+     controllerAs: 'orderList'
    })
    .otherwise('/main')
 }

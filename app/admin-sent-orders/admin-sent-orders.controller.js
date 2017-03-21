@@ -9,8 +9,19 @@ angular
   ])
 
 function sentOrdersController (OrderService) {
-  console.log('Controller loaded')
   var vm = this
 
-  vm.ordersList = OrderService.query({})
+  vm.list = OrderService.query({})
+  vm.calculateTotalAmount = calculateTotalAmount
+  vm.calculateQuantity = calculateQuantity
+
+  function calculateTotalAmount (list) {
+    return list
+      .map(item => item.product.price * item.quantity)
+      .reduce((acc, val) => acc + val, 0)
+  }
+
+  function calculateQuantity (list) {
+    return list.reduce((acc, val) => acc + val.quantity, 0)
+  }
 }
