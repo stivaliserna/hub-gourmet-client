@@ -4,7 +4,7 @@ angular
   .module('hubGourmetApp')
   .service('authService', authService)
 
-function authService ($log, lock, authManager, localStorageService) {
+function authService ($log, lock, authManager, localStorageService, $location) {
   function login () {
     lock.show()
   }
@@ -31,5 +31,6 @@ function authService ($log, lock, authManager, localStorageService) {
   function logout () {
     localStorageService.remove('id_token')
     authManager.unauthenticate()
+    $location.url('/login')
   }
 }
