@@ -12,13 +12,13 @@
           <th colspan="7"><input st-search="" class="search-input form-control" placeholder="Búsqueda global de productos ..." type="text"/></th>
         </tr>
         <tr>
-          <th class="left" st-sort="productID" st-sort-default="true">Referencia</th>
-          <th class="left" st-sort="description">Producto</th>
-          <th class="right" st-sort="productUnitQuantity">Cantidad</th>
-          <th class="right" st-sort="productUnit">Unidad de Medida</th>
-          <th class="right" st-sort="price">Precio</th>
-          <th class="center" st-sort="">Imagen</th>
-          <th class="right" st-sort="minOrderQuantity">Orden Mínima</th>
+          <th class="left" st-sort="productID" st-sort-default="true">Referencia <i class="fa fa-caret-down" aria-hidden="true"></i></th>
+          <th class="left" st-sort="description">Producto <i class="fa fa-caret-down" aria-hidden="true"></i></th>
+          <th class="right" st-sort="productUnitQuantity"><i class="fa fa-caret-down" aria-hidden="true"></i> Cantidad</th>
+          <th class="right" st-sort="productUnit"><i class="fa fa-caret-down" aria-hidden="true"></i> Unidad de Medida</th>
+          <th class="right" st-sort="price"><i class="fa fa-caret-down" aria-hidden="true"></i> Precio</th>
+          <th class="right" st-sort=""><i class="fa fa-caret-down" aria-hidden="true"></i> Imagen</th>
+          <th class="right" st-sort="minOrderQuantity"><i class="fa fa-caret-down" aria-hidden="true"></i> Orden Mínima</th>
         </tr>
       </thead>
       <tbody ng-repeat="product in admin.displayedProductsList">
