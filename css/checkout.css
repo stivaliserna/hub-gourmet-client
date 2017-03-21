@@ -1,50 +1,3 @@
-.table-checkout {
-  margin-top: 2em;
-  font-family: 'Titillium Web', sans-serif;
-  table-layout: fixed;
-}
-
-
-.table tr.left,
-.table td.left,
-.table th.left {
-  vertical-align: middle;
-  text-align: left;
-}
-
-.table tr.center,
-.table td.center,
-.table th.center {
-  text-align: center;
-  vertical-align: middle;
-}
-
-.table tr.right,
-.table td.right,
-.table th.right {
-  text-align: right;
-  vertical-align: middle;
-}
-
-.table tr.top,
-.table td.top,
-.table th.top {
-  vertical-align: top;
-}
-
-.table tr.middle,
-.table td.middle,
-.table th.middle {
-  vertical-align: middle;
-}
-
-.table tr.bottom,
-.table td.bottom,
-.table th.bottom {
-  vertical-align: bottom;
-}
-
-
 .th-remove {
   width: 80px;
 }
@@ -71,10 +24,6 @@
 
 /*Order form*/
 
-.container.add-order {
-  width: 50em;
-}
-
 .add-order input {
   background-color: #f6f6f6;
   border-radius: 0;
@@ -91,22 +40,6 @@
   font-family: 'Titillium Web', sans-serif;
   font-size: 1.2em;
   height: 3em;
-}
-
-.order-button, .reserve {
-  font-family: 'Titillium Web', sans-serif;
-  border: none;
-  border-radius: 0;
-  color: #FFF;
-  font-size: 1.3em;
-  background-color: #FF4C51;
-  padding: 0.5em 1em 0.5em 1em;
-  display: block;
-}
-
-.order-button:hover, 
-.reserve:hover {
-  opacity: 0.9;
 }
 
 label {

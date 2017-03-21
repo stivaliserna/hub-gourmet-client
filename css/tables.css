@@ -1,0 +1,44 @@
+.table tr.left,
+.table td.left,
+.table th.left {
+  vertical-align: middle;
+  text-align: left;
+}
+
+.table tr.center,
+.table td.center,
+.table th.center {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table tr.right,
+.table td.right,
+.table th.right {
+  text-align: right;
+  vertical-align: middle;
+}
+
+.table tr.top,
+.table td.top,
+.table th.top {
+  vertical-align: top;
+}
+
+.table tr.middle,
+.table td.middle,
+.table th.middle {
+  vertical-align: middle;
+}
+
+.table tr.bottom,
+.table td.bottom,
+.table th.bottom {
+  vertical-align: bottom;
+}
+
+.table {
+  margin-top: 2em;
+  font-family: 'Titillium Web', sans-serif;
+  table-layout: fixed;
+}

@@ -3,14 +3,14 @@ ul.menu {
   margin: 0;
   padding:0;
   text-align:center;
-  font: 1.2em 'Titillium Web', sans-serif;
   margin-top: 2em;
   margin-left: 15em;
 }
 
-ul.menu li {
+ul.menu li, button {
   display: inline;
   margin-right:25px; /* spacing between each menu item */
+  font: 1.2em 'Titillium Web', sans-serif;
 }
 
 ul.menu li a {
@@ -46,12 +46,21 @@ ul.menu li a:hover:after {
 
 .nav-cart {
   color: #FF4C51;
-  font-size: 1.5em;
-  margin-right: 8em;
+  font-size: 2em;
+  margin-right: 2em;
 }
 
 .counting {
   color: #FF4C51;
-  font-size: 1em;
+  font-size: 1.5em;
   margin-top: 0.5em;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+.logout:hover {
+  color: #FF4C51;
 }

@@ -1,0 +1,33 @@
+.order-button {
+  font-family: 'Titillium Web', sans-serif;
+  border: none;
+  border-radius: 0;
+  color: #FFF;
+  font-size: 1.3em;
+  background-color: #FF4C51;
+  padding: 0.5em 1em 0.5em 1em;
+  display: block;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.order-button:hover,
+.add-link:hover, 
+.fa-plus-circle:hover {
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.fa-plus-circle {
+  font-size: 2.5em;
+  color: #FF4C51;
+}
+
+.add-link p {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1.5em;
+  display: inline;
+  color: #525150;
+  vertical-align: top;
+}
+
