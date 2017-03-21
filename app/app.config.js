@@ -88,7 +88,7 @@ function authConfig (lockProvider, jwtOptionsProvider) {
         title: ''
       },
       theme: {
-        logo: 'http://enactus.s3.amazonaws.com/assets/enactus-org/large/home-logo.png',
+        logo: '',
         primaryColor: '#FF4C51'
       }
     }
