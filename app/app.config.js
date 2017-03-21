@@ -81,7 +81,16 @@ function authConfig (lockProvider, jwtOptionsProvider) {
     clientID: 'NXVJxodYA5uc0slHzcrFBY1XRSQokdd4',
     domain: 'hubgourmet.auth0.com',
     options: {
-      _idTokenVerification: false
+      _idTokenVerification: false,
+      container: 'hiw-login-container',
+      languageDictionary: {
+        language: 'es',
+        title: ''
+      },
+      theme: {
+        logo: 'http://enactus.s3.amazonaws.com/assets/enactus-org/large/home-logo.png',
+        primaryColor: '#FF4C51'
+      }
     }
   })
 
