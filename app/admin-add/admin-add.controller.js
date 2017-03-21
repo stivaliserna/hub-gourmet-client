@@ -23,6 +23,7 @@ function adminAddController ($location, $log, ProductService) {
   vm.addProduct = addProduct
 
   function addProduct (product) {
+    product.base64Img = 'data:' + vm.imageModel.filetype + ';base64,' + vm.imageModel.base64
     ProductService.create(product).$promise.then(function () {
       vm.newProductModel = null
       $location.url('/admin/products')
