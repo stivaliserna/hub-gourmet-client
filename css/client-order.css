@@ -1,0 +1,26 @@
+.elem-title {
+  background-color: #090f29;
+  color: #f7f7f7;
+  font-family: 'Titillium Web', sans-serif;
+  width: 10em;
+  height: 3em;
+  vertical-align: middle;
+  text-align: center;
+  display: table-cell;
+}
+
+.banks img {
+  width: 76px;
+  border-radius: 50px;
+  margin-top: 0.6em;
+  display: block;
+  margin: 0 auto;
+}
+
+.elem-desc {
+  background-color: #f7f7f7;
+  width: 25em;
+  height: 20em;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 15px;
+}

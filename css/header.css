@@ -59,6 +59,10 @@ button {
   border: none;
 }
 
+.logout-tag {
+  
+}
+
 .logout:hover {
   color: #FF4C51;
 }
