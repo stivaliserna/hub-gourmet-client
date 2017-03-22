@@ -13,4 +13,10 @@ function adminProductsController (ProductService, ShoppingCartService) {
 
   vm.newProductModel = null
   vm.productsList = ProductService.query({})
+  vm.archivedProduct = archivedProduct
+
+  function archivedProduct (product) {
+    product.archived = true
+    product.$save()
+  }
 }
