@@ -22,7 +22,7 @@
           <th class="right" st-sort="minOrderQuantity"><i class="fa fa-caret-down" aria-hidden="true"></i> Disponibles</th>
         </tr>
       </thead>
-      <tbody ng-repeat="product in admin.displayedProductsList">
+      <tbody ng-repeat="product in admin.displayedProductsList | filter: {archived: false}">
         <tr>
           <td><button ng-click="admin.archivedProduct(product)"><i class="fa fa-minus-circle" aria-hidden="true"></i></button></td>
           <td class="left" >{{ product.productID }}</td>
