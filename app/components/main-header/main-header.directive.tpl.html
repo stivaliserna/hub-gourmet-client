@@ -1,15 +1,18 @@
 <nav class="navbar">
   <div class="container-fluid">
-    <ul class="menu">
+    <ul class="menu nav-justified">
       <li ng-if="mainHeader.hideClientComponents()"><a href="#!/products">INICIO</a></li>
       <li ng-if="mainHeader.hideClientComponents()"><a href="#!/products">PRODUCTOS</a></li>
       <li ng-if="mainHeader.hideClientComponents()"><a href="#!/products">CONTACTO</a></li>
       <li ng-if="mainHeader.showAdminComponents()"><a href="#!/admin/products">PRODUCTOS</a></li>
       <li ng-if="mainHeader.showAdminComponents()"><a href="#!/admin/orders">COMPRAS</a></li>
-      <li class="pull-right" ng-if="mainHeader.showAdminComponents()"><i class="fa fa-sign-out" aria-hidden="true"></i><button class="logout" type="button" ng-click="mainHeader.authService.logout()">Cerrar sesión</button></li>
+      <li ng-if="mainHeader.showAdminComponents()"><a href="#!/products">TIENDA</a></li>
+
+      <li class="logout-tag" ng-if="mainHeader.showAdminComponents()"><i class="fa fa-sign-out" aria-hidden="true"></i><button class="logout" type="button" ng-click="mainHeader.authService.logout()">Cerrar sesión</button></li>
+
       <span ng-if="mainHeader.hideClientComponents()" shopping-cart-menu></span>
       <span ng-if="mainHeader.showCart()" shopping-cart-menu></span>
+
     </ul>
   </div>
 </nav>
-

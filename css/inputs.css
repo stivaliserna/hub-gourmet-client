@@ -1,0 +1,40 @@
+input.add-order {
+  background-color: #f6f6f6;
+  border-radius: 0;
+  border: none;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1.2em;
+  height: 3em;
+}
+
+.admin-add-product input {
+  background-color: #f6f6f6;
+  border-radius: 0;
+  border: none;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1.2em;
+  height: 3em;
+}
+
+.add-order select {
+  background-color: #f6f6f6;
+  border-radius: 0;
+  border: none;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1.2em;
+  height: 3em;
+}
+
+.admin-add-product select {
+  background-color: #f6f6f6;
+  border-radius: 0;
+  border: none;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1.2em;
+  height: 3em;
+}
+
+label {
+  color: #FF4C51;
+  font-size: 1.2em;
+}

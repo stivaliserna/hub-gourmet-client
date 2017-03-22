@@ -4,7 +4,6 @@ ul.menu {
   padding:0;
   text-align:center;
   margin-top: 2em;
-  margin-left: 15em;
 }
 
 ul.menu li, button {
@@ -47,7 +46,6 @@ ul.menu li a:hover:after {
 .nav-cart {
   color: #FF4C51;
   font-size: 2em;
-  margin-right: 2em;
 }
 
 .counting {
@@ -63,4 +61,11 @@ button {
 
 .logout:hover {
   color: #FF4C51;
+}
+
+@media only screen and (min-width: 640px) {
+  .nav-cart {
+    margin-right: 2em;
+  }
+
 }

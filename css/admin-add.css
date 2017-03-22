@@ -1,0 +1,14 @@
+.admin-add-product {
+  margin-top: 6em;
+}
+
+.add-button {
+  margin: 0;
+}
+
+.selected-img {
+  width: 20em;
+  height: 20em;
+  margin: 0 auto;
+  position: absolute;
+}

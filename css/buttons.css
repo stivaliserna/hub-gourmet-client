@@ -1,4 +1,4 @@
-.order-button {
+.order-button, .add-button {
   font-family: 'Titillium Web', sans-serif;
   border: none;
   border-radius: 0;
@@ -13,7 +13,8 @@
 
 .order-button:hover,
 .add-link:hover, 
-.fa-plus-circle:hover {
+.fa-plus-circle:hover,
+.add-button:hover {
   opacity: 0.9;
   text-decoration: none;
 }
