@@ -13,11 +13,6 @@ angular
 routerConfig.$inject = ['$routeProvider']
 function routerConfig ($routeProvider) {
   $routeProvider
-  .when('/', {
-    templateUrl: 'app/products/products.tpl.html',
-    controller: 'productsController',
-    controllerAs: 'products'
-  })
   .when('/login', {
     templateUrl: 'app/components/login/login.tpl.html',
     controller: 'LoginController',
