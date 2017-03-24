@@ -5,9 +5,10 @@
     <table st-table="orderList.displayedOrdersList" st-safe-src="orderList.list" class="table table-hover table-bordered">
       <thead>
         <tr>
-          <th colspan="9"><input st-search="" class="search-input form-control" placeholder="Búsqueda global de órdenes de compra ..." type="text"/></th>
+          <th colspan="10"><input st-search="" class="search-input form-control" placeholder="Búsqueda global de órdenes de compra ..." type="text"/></th>
         </tr>
         <tr>
+          <th class="center">Marcar completada</th>
           <th class="left" st-sort="name" st-sort-default="true">Nombre <i class="fa fa-caret-down" aria-hidden="true"></i></th>
           <th class="left" st-sort="surname">Apellido <i class="fa fa-caret-down" aria-hidden="true"></i></th>
           <th class="left" st-sort="mail">Correo electrónico <i class="fa fa-caret-down" aria-hidden="true"></i></th>
@@ -19,8 +20,9 @@
           <th class="right" st-sort="items"><i class="fa fa-caret-down" aria-hidden="true"></i> Total</th>
         </tr>
       </thead>
-      <tbody ng-repeat="order in orderList.displayedOrdersList">
+      <tbody ng-repeat="order in orderList.displayedOrdersList | filter: {completed: false}">
         <tr>
+          <td class="center"><button ng-click="orderList.orderStatus(order)"><i class="fa fa-check" aria-hidden="true"></i></button></td>
           <td class="left">{{ order.name }}</td>
           <td class="left">{{ order.surname }}</td>
           <td class="left">{{ order.mail }}</td>

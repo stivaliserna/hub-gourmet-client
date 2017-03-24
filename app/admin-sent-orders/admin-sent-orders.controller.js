@@ -14,6 +14,7 @@ function sentOrdersController (OrderService) {
   vm.list = OrderService.query({})
   vm.calculateTotalAmount = calculateTotalAmount
   vm.calculateQuantity = calculateQuantity
+  vm.orderStatus = orderStatus
 
   function calculateTotalAmount (list) {
     return list
@@ -23,5 +24,10 @@ function sentOrdersController (OrderService) {
 
   function calculateQuantity (list) {
     return list.reduce((acc, val) => acc + val.quantity, 0)
+  }
+
+  function orderStatus (order) {
+    order.completed = true
+    order.$save()
   }
 }
