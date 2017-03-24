@@ -95,7 +95,7 @@ function authConfig (lockProvider, jwtOptionsProvider) {
         title: ''
       },
       theme: {
-        logo: '../img/logo.png',
+        logo: '/img/logo.png',
         primaryColor: '#FF4C51'
       }
     }
