@@ -12,7 +12,7 @@ This is an Open Source e-commerce web application for the [Skylabcoders Academy]
 * Write access to a MongoDB database
 * A JWT (JSON Web Token) issuer like [Auth0](https://auth0.com/)
 
-##Running 
+## Running 
 
 * `$ git clone --recursive`
 * Install dependencies with `$ npm install`
