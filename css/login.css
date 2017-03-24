@@ -1,3 +1,9 @@
+.login-container {
+  background-color: #090f29;
+  height: 100vh;
+  overflow: hidden;
+}
+
 #hiw-login-container {
   margin-top: 15%;
 }

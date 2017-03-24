@@ -12,7 +12,7 @@
           <th colspan="8"><input st-search="" class="search-input form-control" placeholder="Búsqueda global de productos ..." type="text"/></th>
         </tr>
         <tr>
-          <th class="left">Archivar <i class="fa fa-caret-down" aria-hidden="true"></i></th>
+          <th class="center">Archivar</th>
           <th class="left" st-sort="productID" st-sort-default="true">Referencia <i class="fa fa-caret-down" aria-hidden="true"></i></th>
           <th class="left" st-sort="description">Producto <i class="fa fa-caret-down" aria-hidden="true"></i></th>
           <th class="right" st-sort="productUnitQuantity"><i class="fa fa-caret-down" aria-hidden="true"></i> Cantidad</th>
@@ -24,7 +24,7 @@
       </thead>
       <tbody ng-repeat="product in admin.displayedProductsList | filter: {archived: false}">
         <tr>
-          <td><button ng-click="admin.archivedProduct(product)"><i class="fa fa-minus-circle" aria-hidden="true"></i></button></td>
+          <td class="center archived"><button ng-click="admin.archivedProduct(product)"><i class="fa fa-minus-circle" aria-hidden="true"></i></button></td>
           <td class="left" >{{ product.productID }}</td>
           <td class="left"  
               buttons="no" 

@@ -1,13 +1,19 @@
 <div main-header></div>
 
 <div class="container">
-  <div class="client-info">
-    <div>{{ clientOrder.orderModel.name + ' ' + clientOrder.orderModel.surname + ', hemos recibido tu pedido exitosamente.'}}</div>
-    <div>{{ 'Correo Electrónico: ' + clientOrder.orderModel.mail }}</div>
-    <div>{{ 'Teléfono: ' + clientOrder.orderModel.telephone }}</div>
+  <p class="success-order">¡Hemos recibido tu pedido exitosamente!</p>
+  <div class="client-info row">
+    <div class="col-xs-12 col-sm-12 col-md-3">
+      <i class="fa fa-user" aria-hidden="true"></i><div>{{ clientOrder.orderModel.name + ' ' + clientOrder.orderModel.surname }}</div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-5">
+      <i class="fa fa-envelope" aria-hidden="true"></i><div>{{ ' Correo Electrónico: ' + clientOrder.orderModel.mail }}</div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-4">
+      <i class="fa fa-phone" aria-hidden="true"></i><div>{{ ' Teléfono: ' + clientOrder.orderModel.telephone }}</div>
+    </div>
   </div>
   <div>
-    <p>Este es tu pedido: </p>
     <table class="table table-checkout">
       <thead>
         <tr>
@@ -21,52 +27,72 @@
         <tr ng-repeat="item in clientOrder.orderModel.items">
           <td class="left">{{ item.product.description }}</td>
           <td class="right">{{ item.quantity }}</td>
-          <td class="right">{{ item.product.price | currency }}</td>
-          <td class="right">{{ item.quantity * item.product.price | currency }}</td>
+          <td class="right">{{ item.price | currency }}</td>
+          <td class="right">{{ item.quantity * item.price | currency }}</td>
         </tr>
         <tr>
           <td></td>
           <td></td>
           <td></td>
-          <td class="right"><!-- {{ clientOrder.orderTotal(item) | currency }} --></td>
+          <td class="right">{{ clientOrder.orderTotal(clientOrder.orderModel.items) | currency }}</td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <p>Para proceder con el pago deberás realizar una transferencia o depósito a cualquiera de las siguientes cuentas bancarias</p> 
+  <p class="process-check"><i class="fa fa-angle-right" aria-hidden="true"></i> Para proceder con el pago deberás realizar una transferencia o depósito a cualquiera de las siguientes cuentas bancarias:</p> 
 
   <div class="banks">
     <div class="row">
-      <div class="col-sm-10 col-md-4 cta-contents">
-        <h1 class="elem-title">Banco Mercantil</h1>
-        <img src="https://i2.wp.com/www.berrydroid.com/wp-content/uploads/2011/11/mercantil-movil.png" alt="">
+      <div class="col-xs-10 col-sm-10 col-md-4 cta-contents">
+        <h3 class="elem-title">
+          <img src="../../img/mercantil-movil.png" alt="">
+          Banco Mercantil
+        </h3>
         <div class="elem-desc">
-          <p>Beneficiario: George Hoyt</p>
-          <p>Cédula de Identidad: V- 23.456.789</p>
-          <p>Cuenta ahorros: 0203-0897-736743-83765-2</p>
-          <p>Correo Electrónico: georgeHoyt@gmail.com</p>
+          <p class="subtitle">Beneficiario: </p>
+          <p class="parag">George Hoyt</p>
+          <p class="subtitle">Cédula de Identidad: </p>
+          <p class="parag">V- 23.456.789</p>
+          <p class="subtitle">Cuenta ahorros: </p>
+          <p class="parag">0203-0897-736743-83765-2</p>
+          <p class="subtitle">Correo Electrónico: </p>
+          <p class="parag">georgeHoyt@gmail.com</p>
         </div>
       </div>
-      <div class="col-sm-10 col-md-4 cta-contents">
-        <h1 class="elem-title">Banco de Venezuela</h1>
-        <img src="https://pbs.twimg.com/profile_images/2435185434/9ukmx5e30b9pk5snr8hw.jpeg" alt="">
+      <div class="col-xs-10 col-sm-10 col-md-4 cta-contents">
+        <h3 class="elem-title">
+          <img src="../../img/venezuela.png" alt="">
+          Banco de Venezuela
+        </h3>
         <div class="elem-desc">
-          <p>Beneficiario: George Hoyt</p>
-          <p>Cédula de Identidad: V- 23.456.789</p>
-          <p>Cuenta ahorros: 0203-0897-736743-83765-2</p>
-          <p>Correo Electrónico: georgeHoyt@gmail.com</p>
+          <p class="subtitle">Beneficiario: </p>
+          <p class="parag">George Hoyt</p>
+          <p class="subtitle">Cédula de Identidad: </p>
+          <p class="parag">V- 23.456.789</p>
+          <p class="subtitle">Cuenta ahorros: </p>
+          <p class="parag">0203-0897-736743-83765-2</p>
+          <p class="subtitle">Correo Electrónico: </p>
+          <p class="parag">georgeHoyt@gmail.com</p>
         </div>
       </div>
-      <div class="col-sm-10 col-md-4 cta-contents">
-        <h1 class="elem-title">Banco Caroní</h1>
-        <img src="https://pbs.twimg.com/profile_images/515597633692250112/Jnfq2mJL.jpeg" alt="">
+      <div class="col-xs-10 col-sm-10 col-md-4 cta-contents">
+          <h3 class="elem-title">
+            <img src="../../img/caroni.png" alt="">
+            Banco Caroní
+          </h3>
         <div class="elem-desc">
-          <p>Beneficiario: George Hoyt</p>
-          <p>Cédula de Identidad: V- 23.456.789</p>
-          <p>Cuenta ahorros: 0203-0897-736743-83765-2</p>
-          <p>Correo Electrónico: georgeHoyt@gmail.com</p>
+          <p class="subtitle">Beneficiario: </p>
+          <p class="parag">George Hoyt</p>
+          <p class="subtitle">Cédula de Identidad: </p>
+          <p class="parag">V- 23.456.789</p>
+          <p class="subtitle">Cuenta ahorros: </p>
+          <p class="parag">0203-0897-736743-83765-2</p>
+          <p class="subtitle">Correo Electrónico: </p>
+          <p class="parag">georgeHoyt@gmail.com</p>
         </div>
       </div>
+    </div>
   </div>
 </div>
+<p class="process-check next"><i class="fa fa-angle-right" aria-hidden="true"></i> Una vez realizado el pago, deberás enviarnos un correo con el número de comprobante y tu nombre completo a la siguiente dirección: <strong>ventas@hubgourmet.com</strong></p>

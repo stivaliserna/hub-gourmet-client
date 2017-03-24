@@ -13,7 +13,7 @@ table {
 }
 
 input {
-  width: 18em;
+  width: 15.7em;
   height: 2.5em;
 }
 
@@ -34,4 +34,12 @@ a .fa-pencil {
 a:hover .fa-pencil {
   opacity: 1;
   color: #7A7978;
+}
+
+.fa-minus-circle {
+  color: #B2AAA1;
+}
+
+.fa-minus-circle:hover {
+  color: #423F3C;
 }

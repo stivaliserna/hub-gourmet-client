@@ -8,5 +8,6 @@ angular.module('hubGourmetApp', [
   'smart-table',
   'xeditable',
   'auth0.lock',
-  'angular-jwt'
+  'angular-jwt',
+  'ngAnimate'
 ])

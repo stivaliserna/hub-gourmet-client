@@ -13,11 +13,12 @@ function clientOrderController (OrderService, $routeParams) {
   var vm = this
 
   vm.orderModel = OrderService.get({ _id: $routeParams._id })
-  /*vm.orderTotal = orderTotal
+  vm.orderTotal = orderTotal
 
   function orderTotal (list) {
+    if (!list) return 0
     return list
-      .map(item => item.product.price * item.quantity)
+      .map(item => item.price * item.quantity)
       .reduce((acc, val) => acc + val, 0)
   }
-*/}
+}

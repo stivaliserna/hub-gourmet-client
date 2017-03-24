@@ -1,3 +1,26 @@
+.hersheys, .nestle {
+  display: none;
+}
+
+.nutella img {
+  width: 100%;
+  height: 30;
+}
+
+.products-text {
+  width: 65%;
+  padding-bottom: 1em;
+  display: block;
+  margin: 0 auto;
+  font-family: 'Titillium Web', sans-serif;
+  color: #999898;
+  font-size: 2.5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+  border-bottom: 2px solid #999898;
+}
+
 .product-card {
   padding-bottom: 5em;
   font-family: 'Titillium Web', sans-serif;
@@ -83,4 +106,178 @@
 .cart-items:hover {
   opacity: 0.6;
   color: #FFF;
+}
+
+/* Home images */
+
+.public-img {
+  position: relative;
+}
+
+.public-img::before {
+  bottom: 0;
+  content: " ";
+  display: block;
+  background-color: #fff;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: all 250ms ease-in-out 0s;
+  z-index: 0;
+}
+
+.public-img .marketing {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  font-family: 'Titillium Web', sans-serif;
+  text-align: center;
+  background-color: #FFF;
+  opacity: 0.8;
+  width: 96%;
+  height: 8em;
+  transition: all 350ms ease-in-out 0s;
+  opacity: 0;
+  background-color: #090f29;
+}
+
+.public-img:hover .marketing {
+  opacity: 0.8;
+}
+
+.public-img:hover::before {
+  opacity: 0.9;
+}
+
+.marketing i, h4 {
+  display: inline;
+  margin-right: 10px;
+  line-height: 2.5em;
+  color: #F7F7F7;
+}
+
+.marketing i {
+  font-size: 1.5em;
+}
+
+.marketing h4 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.marketing p {
+  font-size: 1em;
+  color: #F7F7F7;
+}
+
+@media (min-width: 620px) {
+  .hersheys  {
+    display: inline-block;
+  }
+
+  .init img {
+    width: 100%;
+    height: 35em;
+  }
+
+  .public-img .marketing {
+    width: 25em;
+    display: block;
+    margin: 0 auto;
+    height: 6em;
+  }
+
+  .marketing i, h4 {
+    display: inline;
+    margin-right: 0.5em;
+    line-height: 2.5em;
+  }
+
+  .marketing i {
+    font-size: 1.5em;
+  }
+
+  .marketing h4 {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  .marketing p {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 1000px) {
+  .hersheys, .nestle  {
+    display: inline-block;
+  }
+
+  .init img {
+    width: 100%;
+    height: 50em;
+  }
+
+  .public-img .marketing {
+    width: 23em;
+    display: block;
+    margin: 0 auto;
+    height: 8em;
+  }
+
+  .marketing i, h4 {
+    margin-right: 0.5em;
+    line-height: 2em;
+  }
+
+  .marketing i {
+    font-size: 2em;
+    color: #70ba73;
+  }
+
+  .marketing h4 {
+    font-size: 1.5em;
+  }
+
+  .marketing p {
+    font-size: 1.3em;
+  }
+}
+
+@media (min-width: 1300px) {
+  .hersheys, .nestle  {
+    display: inline-block;
+  }
+
+  .init img {
+    width: 100%;
+    height: 50em;
+  }
+
+  .public-img .marketing {
+    width: 30em;
+    display: block;
+    margin: 0 auto;
+    height: 8em;
+  }
+
+  .marketing i, h4 {
+    margin-right: 0.5em;
+    line-height: 2.5em;
+  }
+
+  .marketing i {
+    font-size: 2em;
+  }
+
+  .marketing h4 {
+    font-size: 1.5em;
+  }
+
+  .marketing p {
+    font-size: 1.4em;
+  }
 }

@@ -1,26 +1,85 @@
+body {
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.success-order {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.client-info {
+  text-align: center;
+}
+
+.client-info div {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  display: inline;
+
+}
+
+.fa-user, .fa-envelope, .fa-phone {
+  color: #70ba73;
+  font-size: 1.5em;
+  margin-left: 1em;
+}
+
+.process-check {
+  font-size: 1.2em;
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+
+.next {
+  border: 2px solid #70ba73;
+  padding: 1em;
+  width: 65%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+
 .elem-title {
   background-color: #090f29;
   color: #f7f7f7;
   font-family: 'Titillium Web', sans-serif;
-  width: 10em;
+  width: 25em;
   height: 3em;
   vertical-align: middle;
-  text-align: center;
   display: table-cell;
+  text-align: center;
 }
 
 .banks img {
-  width: 76px;
-  border-radius: 50px;
-  margin-top: 0.6em;
-  display: block;
-  margin: 0 auto;
+  width: 50px;
+  display: inline;
+  margin-right: 0.5em;
 }
 
 .elem-desc {
   background-color: #f7f7f7;
-  width: 25em;
-  height: 20em;
-  font-family: 'Titillium Web', sans-serif;
-  font-size: 15px;
+  height: 16em;
+  font-size: 1.3em;
+}
+
+.subtitle {
+  font-weight: bold;
+  margin-left: 1em;
+  margin-top: 0.5em;
+  color: #3D3C39;
+}
+
+.parag {
+  margin-left: 1em;
+}
+
+@media only screen and (min-width: 970px) {
+  .elem-title {
+    width: 20em;
+  }
+
 }

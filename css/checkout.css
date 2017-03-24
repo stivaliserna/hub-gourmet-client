@@ -22,8 +22,13 @@
   font-size: 1.3em;
 }
 
-/*Order form*/
+/* Animation */
+  
+.animate-show-hide.ng-hide {
+  opacity: 0;
+}
 
-.showing {
-  transition: all linear 1s;
+.animate-show-hide.ng-hide-add,
+.animate-show-hide.ng-hide-remove {
+  transition: all linear 0.3s;
 }
