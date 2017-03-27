@@ -40,7 +40,6 @@
 .table {
   margin-top: 2em;
   font-family: 'Titillium Web', sans-serif;
-  table-layout: fixed;
 }
 
 .fa-caret-down {

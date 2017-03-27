@@ -1,44 +1,46 @@
 <div main-header></div>
 
 <div class="container">
-  <table class="table table-checkout">
-    <thead>
-      <tr>
-        <th class="th-remove"></th>
-        <th class="left">Producto</th>
-        <th class="right">Precio</th>
-        <th class="right">Cantidad</th>
-        <th class="right">Total</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr ng-repeat="item in checkout.getItems()">
-        <td class="center">
-          <button type="submit" ng-click="checkout.removeItem(item.product)">
-            <i class="fa fa-trash-o" aria-hidden="true"></i>
-          </button>
-        </td>
-        <td>{{ item.product.description }}</td>
-        <td class="right">{{ item.product.price | currency }}</td>
-        <td class="right">
-          <div class="form-group pull-right">
-            <input type="number"
-                   min="1"
-                   class="form-control"
-                   ng-model="item.quantity">
-          </div>
-        </td>
-        <td class="right">{{ item.quantity * item.product.price | currency }}</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td class="right">{{ checkout.total() | currency }}</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="table-responsive">
+    <table class="table table-checkout">
+      <thead>
+        <tr>
+          <th class="th-remove"></th>
+          <th class="left">Producto</th>
+          <th class="right">Precio</th>
+          <th class="right">Cantidad</th>
+          <th class="right">Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="item in checkout.getItems()">
+          <td class="center">
+            <button type="submit" ng-click="checkout.removeItem(item.product)">
+              <i class="fa fa-trash-o" aria-hidden="true"></i>
+            </button>
+          </td>
+          <td>{{ item.product.description }}</td>
+          <td class="right">{{ item.product.price | currency }}</td>
+          <td class="right">
+            <div class="form-group pull-right">
+              <input type="number"
+                     min="1"
+                     class="form-control"
+                     ng-model="item.quantity">
+            </div>
+          </td>
+          <td class="right">{{ item.quantity * item.product.price | currency }}</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="right">{{ checkout.total() | currency }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
   <button class="order-button pull-right" type="button" ng-click="showForm=true">RESERVAR</button>
 </div>
 
