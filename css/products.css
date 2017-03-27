@@ -128,7 +128,7 @@
   z-index: 0;
 }
 
-.public-img .marketing {
+.public-img .aside {
   bottom: 0;
   left: 0;
   position: absolute;
@@ -145,7 +145,7 @@
   background-color: #090f29;
 }
 
-.public-img:hover .marketing {
+.public-img:hover .aside {
   opacity: 0.8;
 }
 
@@ -153,25 +153,31 @@
   opacity: 0.9;
 }
 
-.marketing i, h4 {
+.aside i, h4 {
   display: inline;
   margin-right: 10px;
   line-height: 2.5em;
-  color: #F7F7F7;
 }
 
-.marketing i {
+.aside i {
   font-size: 1.5em;
+  color: #70ba73;
 }
 
-.marketing h4 {
+.aside h4 {
   font-size: 1.5em;
   font-weight: bold;
+  color: #F7F7F7;
 }
 
-.marketing p {
+.aside p {
   font-size: 1em;
   color: #F7F7F7;
+}
+
+.added {
+  font-size: 2em;
+  display: block;
 }
 
 @media (min-width: 620px) {
@@ -185,29 +191,29 @@
     object-fit: cover;
   }
 
-  .public-img .marketing {
+  .public-img .aside {
     width: 25em;
     display: block;
     margin: 0 auto;
     height: 6em;
   }
 
-  .marketing i, h4 {
+  .aside i, h4 {
     display: inline;
     margin-right: 0.5em;
     line-height: 2.5em;
   }
 
-  .marketing i {
+  .aside i {
     font-size: 1.5em;
   }
 
-  .marketing h4 {
+  .aside h4 {
     font-size: 1.5em;
     font-weight: bold;
   }
 
-  .marketing p {
+  .aside p {
     font-size: 1em;
   }
 }
@@ -222,28 +228,27 @@
     height: 50em;
   }
 
-  .public-img .marketing {
+  .public-img .aside {
     width: 23em;
     display: block;
     margin: 0 auto;
     height: 8em;
   }
 
-  .marketing i, h4 {
+  .aside i, h4 {
     margin-right: 0.5em;
     line-height: 2em;
   }
 
-  .marketing i {
+  .aside i {
     font-size: 2em;
-    color: #70ba73;
   }
 
-  .marketing h4 {
+  .aside h4 {
     font-size: 1.5em;
   }
 
-  .marketing p {
+  .aside p {
     font-size: 1.3em;
   }
 }
@@ -258,27 +263,27 @@
     height: 50em;
   }
 
-  .public-img .marketing {
+  .public-img .aside {
     width: 30em;
     display: block;
     margin: 0 auto;
     height: 8em;
   }
 
-  .marketing i, h4 {
+  .aside i, h4 {
     margin-right: 0.5em;
     line-height: 2.5em;
   }
 
-  .marketing i {
+  .aside i {
     font-size: 2em;
   }
 
-  .marketing h4 {
+  .aside h4 {
     font-size: 1.5em;
   }
 
-  .marketing p {
+  .aside p {
     font-size: 1.4em;
   }
 }

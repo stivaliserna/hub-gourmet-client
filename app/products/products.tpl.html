@@ -3,7 +3,7 @@
 <div class="row init">
   <div class="col-sm-6 col-md-4 hersheys public-img">
     <img src="img/hersheys1.jpg" alt="">
-      <div class="marketing">
+      <div class="aside">
         <i class="fa fa-globe" aria-hidden="true"></i>
         <h4>PRODUCTOS IMPORTADOS</h4>
         <p>De USA a Vanezuela</p>
@@ -11,7 +11,7 @@
   </div>
   <div class="col-xs-12 col-sm-6 col-md-4 nutella public-img">
     <img src="img/nutella1.jpg" alt="">
-      <div class="marketing">
+      <div class="aside">
         <i class="fa fa-truck" aria-hidden="true"></i>
         <h4>ENVÍOS</h4>
         <p>A todo el país, donde quiera que te encuentres</p>
@@ -19,7 +19,7 @@
   </div>
   <div class="col-md-4 nestle public-img">
     <img src="img/nestle1.jpg" alt="">
-      <div class="marketing">
+      <div class="aside">
         <i class="fa fa-money" aria-hidden="true"></i>
         <h4>MEJOR PRECIO</h4>
         <p>Por compras al mayor</p>
@@ -31,12 +31,12 @@
 
 <section class="container products-list">
   <div class="row">
-    <div class="product-card pull-left col-xs-12 col-md-6 col-lg-4" ng-repeat="product in products.productsList | filter: {archived: false}">
+    <div class="product-card pull-left col-xs-12 col-md-6 col-lg-4" ng-repeat="product in products.productsList | filter: { archived: false }">
       <div class="img-product-card">
         <img ng-src="{{ product.base64Img || '../download.jpg' }}" alt="">
         <div class="product-card-shop">
-          <button type="button" class="btn shop-button" ng-click="products.addItem(product, 1)">
-            <i class="glyphicon glyphicon-shopping-cart"></i>
+          <button type="button" class="btn shop-button" ng-click="products.addItem(product, 1); click = true">
+            <i class="showingMsg" ng-class="{ 'glyphicon glyphicon-shopping-cart': !click, 'glyphicon glyphicon-plus': click }"></i>
           </button>
           <p class="add-to-cart">Añadir al carrito</p>
         </div>
