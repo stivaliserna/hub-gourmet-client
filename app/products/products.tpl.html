@@ -36,7 +36,7 @@
         <img ng-src="{{ product.base64Img || '../download.jpg' }}" alt="">
         <div class="product-card-shop">
           <button type="button" class="btn shop-button" ng-click="products.addItem(product, 1); click = true">
-            <i class="showingMsg" ng-class="{ 'glyphicon glyphicon-shopping-cart': !click, 'glyphicon glyphicon-plus': click }"></i>
+            <i ng-class="{ 'glyphicon glyphicon-shopping-cart': !click, 'glyphicon glyphicon-plus': click }"></i>
           </button>
           <p class="add-to-cart">Añadir al carrito</p>
         </div>
