@@ -12,7 +12,7 @@ function productsController (ProductService, ShoppingCartService) {
   let vm = this
 
   vm.hasMore = true
-  vm.limit = 7
+  vm.limit = 3
   vm.skip = 0
   vm.productsList = []
 

@@ -180,6 +180,10 @@
   display: block;
 }
 
+.load-more:hover {
+  color: #FFF;
+}
+
 @media (min-width: 620px) {
   .hersheys  {
     display: inline-block;

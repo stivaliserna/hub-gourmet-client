@@ -1,4 +1,4 @@
-.order-button, .add-button {
+.order-button, .add-button, .load-more {
   
   border: none;
   border-radius: 0;
@@ -6,7 +6,6 @@
   font-size: 1.3em;
   background-color: #FF4C51;
   padding: 0.5em 1em 0.5em 1em;
-  display: block;
   margin-top: 2em;
   margin-bottom: 2em;
 }
@@ -14,7 +13,8 @@
 .order-button:hover,
 .add-link:hover, 
 .fa-plus-circle:hover,
-.add-button:hover {
+.add-button:hover,
+.load-more:hover {
   opacity: 0.9;
   text-decoration: none;
 }
