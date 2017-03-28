@@ -12,7 +12,7 @@ function productsController (ProductService, ShoppingCartService) {
   let vm = this
 
   vm.hasMore = true
-  vm.limit = 3
+  vm.limit = 7
   vm.skip = 0
   vm.productsList = []
 
@@ -28,7 +28,7 @@ function productsController (ProductService, ShoppingCartService) {
   function fetchProducts (skip, limit) {
     ProductService.query({ skip: skip, limit: limit }).$promise.then(function success (data) {
       vm.productsList = vm.productsList.concat(data)
-      vm.hasMore = !!data.length
+      vm.hasMore = data.length === vm.limit
       vm.skip += vm.limit
     })
   }
