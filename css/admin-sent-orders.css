@@ -1,3 +1,11 @@
 .admin-orders-list {
   width: 130em;
 }
+
+.btn-completed {
+  color: #B2AAA1;
+}
+
+.btn-completed:hover {
+  color: #423F3C;
+}

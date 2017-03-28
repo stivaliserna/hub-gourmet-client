@@ -36,10 +36,10 @@ a:hover .fa-pencil {
   color: #7A7978;
 }
 
-.fa-minus-circle {
+.btn-archived {
   color: #B2AAA1;
 }
 
-.fa-minus-circle:hover {
+.btn-archived:hover {
   color: #423F3C;
 }

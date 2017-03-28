@@ -16,13 +16,12 @@
           <th class="right" st-sort="productUnitQuantity"><i class="fa fa-caret-down" aria-hidden="true"></i> Cantidad</th>
           <th class="right" st-sort="productUnit"><i class="fa fa-caret-down" aria-hidden="true"></i> Unidad de Medida</th>
           <th class="right" st-sort="price"><i class="fa fa-caret-down" aria-hidden="true"></i> Precio</th>
-          <th class="right" st-sort=""><i class="fa fa-caret-down" aria-hidden="true"></i> Imagen</th>
           <th class="right" st-sort="minOrderQuantity"><i class="fa fa-caret-down" aria-hidden="true"></i> Disponibles</th>
         </tr>
       </thead>
       <tbody ng-repeat="product in admin.displayedProductsList | filter: {archived: false}">
         <tr>
-          <td class="center archived"><button ng-click="admin.archivedProduct(product)"><i class="fa fa-minus-circle" aria-hidden="true"></i></button></td>
+          <td class="center"><a href class="btn-archived" ng-click="admin.archivedProduct(product)"><i class="fa fa-minus-circle" aria-hidden="true"></i></a href></td>
           <td class="left" >{{ product.productID }}</td>
           <td class="left"  
               buttons="no" 
@@ -68,9 +67,6 @@
                   <i class="fa fa-pencil pull-left" aria-hidden="true"></i>
                 </div>
               </a>
-          </td>
-          <td class="right">
-            Ver Imagen
           </td>
           <td class="right" 
               buttons="no" 

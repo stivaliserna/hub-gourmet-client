@@ -13,7 +13,7 @@
       <tbody>
         <tr ng-repeat="item in checkout.getItems()">
           <td class="center">
-            <button type="submit" ng-click="checkout.removeItem(item.product)">
+            <button class="btn-remove" type="submit" ng-click="checkout.removeItem(item.product)">
               <i class="fa fa-trash-o" aria-hidden="true"></i>
             </button>
           </td>
@@ -39,7 +39,7 @@
       </tbody>
     </table>
   </div>
-  <button class="order-button pull-right" type="button" ng-click="showForm=true">RESERVAR</button>
+  <button class="btn pull-right" type="button" ng-click="showForm=true">RESERVAR</button>
 </div>
 
 
@@ -96,6 +96,6 @@
              ng-model="checkout.newOrderModel.telephone" 
              placeholder="Ingrese su teléfono">
     </div>
-    <button class="order-button pull-right" type="submit">ENVIAR</button>
+    <button class="btn pull-right" type="submit">ENVIAR</button>
   </form>
 </div>

@@ -1,5 +1,4 @@
-.order-button, .add-button, .load-more {
-  
+.btn {
   border: none;
   border-radius: 0;
   color: #FFF;
@@ -10,11 +9,13 @@
   margin-bottom: 2em;
 }
 
-.order-button:hover,
+.btn:hover {
+  color: #FFF;
+}
+
+.btn:hover,
 .add-link:hover, 
-.fa-plus-circle:hover,
-.add-button:hover,
-.load-more:hover {
+.fa-plus-circle:hover {
   opacity: 0.9;
   text-decoration: none;
 }
@@ -32,12 +33,15 @@
   vertical-align: top;
 }
 
-.btn.active.focus, 
-.btn.active:focus, 
-.btn.focus, 
-.btn:active.focus, 
 .btn:active:focus, 
-.btn:focus {
+.btn:focus,
+.btn-add:active:focus, 
+.btn-add:focus {
   outline: none;
   outline-offset: 0;
+}
+
+.btn:active:focus, 
+.btn:focus {
+  color: #FFF;
 }

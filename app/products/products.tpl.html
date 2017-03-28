@@ -33,7 +33,7 @@
       <div class="img-product-card">
         <img ng-src="{{ product.base64Img || '../download.jpg' }}" alt="">
         <div class="product-card-shop">
-          <button type="button" class="btn shop-button" ng-click="products.addItem(product, 1); click = true">
+          <button type="button" class="btn-add" ng-click="products.addItem(product, 1); click = true">
             <i ng-class="{ 'glyphicon glyphicon-shopping-cart': !click, 'glyphicon glyphicon-plus': click }"></i>
           </button>
           <p class="add-to-cart">Añadir al carrito</p>
@@ -47,7 +47,7 @@
   <div class="row" ng-if="products.hasMore">
     <div class="col-xs-12">
       <p class="text-center">
-        <button type="button" class="btn load-more" ng-click="products.fetchProducts(products.skip, products.limit)">
+        <button type="button" class="btn" ng-click="products.fetchProducts(products.skip, products.limit)">
           Cargar más
         </button>
       </p>

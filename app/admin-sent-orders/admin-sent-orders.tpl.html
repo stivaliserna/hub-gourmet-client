@@ -20,7 +20,7 @@
       </thead>
       <tbody ng-repeat="order in orderList.displayedOrdersList | filter: {completed: false}">
         <tr>
-          <td class="center"><button ng-click="orderList.orderStatus(order)"><i class="fa fa-check" aria-hidden="true"></i></button></td>
+          <td class="center"><a href class="btn-completed" ng-click="orderList.orderStatus(order)"><i class="fa fa-check" aria-hidden="true"></i></a></td>
           <td class="left">{{ order.name }}</td>
           <td class="left">{{ order.surname }}</td>
           <td class="left">{{ order.mail }}</td>
