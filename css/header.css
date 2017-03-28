@@ -1,82 +1,24 @@
-.header-fixed {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  background-color: #FFF;
-  z-index: 
+.navbar-brand {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
-button {
-  background: none;
-  border: none;
+.navbar-header .navbar-nav {
+  margin-right: 1em;
 }
 
-.logout-tag {
-  text-align: right;
-  font-size: 1.2em;
-  border-bottom: 1px solid #D1D0CF;
-  margin-top: 0.5em;
+.navbar-brand img {
+  width: 6em;
 }
-
-.main-container {
-  margin-bottom: 1em;
-  margin-top: 1em;
-}
-
-.main-brand {
-  width: 12em;
-  display: block;
-  margin: 0 auto;
-}
-
-ul.nav.main-nav {
-  text-align: center;
-  margin-top: 2em;
-}
-
-.main-nav > li {
-  display: inline-block;
-  margin: 0 auto;
-}
-
-.main-nav > li + li {
-  margin-left: 20px;
-}
-
-.main-nav > li > a {
-  padding-right: 0;
-  padding-left: 0;
-  font: 1.2em 'Titillium Web', sans-serif;
-  color: black;
-  border-bottom: 2px solid transparent;
-}
-
-.main-nav > li > a:hover,
-.main-nav > li > a:focus {
-  background-color: transparent;
-} 
-
-.main-nav > li:not(:last-child) > a:hover {
-  border-bottom-color: #FF4C51;
-} 
 
 .nav-cart, .counting {
   color: #FF4C51;
   font-size: 1.2em;
 }
 
-@media (min-width: 600px) {
-  .logout-tag button {
-    margin-right: 2em;
-  }
-
-  .main-brand {
-    float: left;
-  }
-
-  .main-nav {
-    float: right;
-    vertical-align: middle;
-  }
+.navbar {
+  background-color: #FFF;
+  border: none;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }

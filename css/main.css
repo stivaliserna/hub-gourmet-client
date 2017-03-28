@@ -10,3 +10,8 @@
 @import url('inputs.css');
 @import url('client-order.css');
 @import url('main-footer.css');
+
+body { 
+  padding-top: 6em;
+  font-family: 'Titillium Web', sans-serif;
+}

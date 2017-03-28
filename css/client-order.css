@@ -1,5 +1,5 @@
 body {
-  font-family: 'Titillium Web', sans-serif;
+  
 }
 
 .success-order {
@@ -46,7 +46,7 @@ body {
 .elem-title {
   background-color: #090f29;
   color: #f7f7f7;
-  font-family: 'Titillium Web', sans-serif;
+  
   width: 25em;
   height: 3em;
   vertical-align: middle;

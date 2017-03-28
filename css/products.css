@@ -12,7 +12,7 @@
   padding-bottom: 1em;
   display: block;
   margin: 0 auto;
-  font-family: 'Titillium Web', sans-serif;
+  
   color: #999898;
   font-size: 2.5em;
   margin-top: 1em;
@@ -23,7 +23,7 @@
 
 .product-card {
   padding-bottom: 5em;
-  font-family: 'Titillium Web', sans-serif;
+  
   text-align: center;
   font-size: 1.3em;
 }
@@ -134,7 +134,7 @@
   position: absolute;
   right: 0;
   z-index: 1;
-  font-family: 'Titillium Web', sans-serif;
+  
   text-align: center;
   background-color: #FFF;
   opacity: 0.8;

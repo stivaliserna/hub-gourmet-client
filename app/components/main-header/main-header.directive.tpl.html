@@ -1,14 +1,52 @@
-<div class="logout-tag" ng-if="mainHeader.showAdminComponents()"><button type="button" ng-click="mainHeader.authService.logout()"><i class="fa fa-sign-out" aria-hidden="true"></i> Cerrar sesión</button></div>
-<div class="main-container container">
-  <a href="#!/products"><img class="main-brand" src="img/logo.png" alt=""></a>
-  <ul class="nav main-nav">
-    <li ng-if="mainHeader.hideClientComponents()"><a href="#!/products">PRODUCTOS</a></li>
-    <li ng-if="mainHeader.hideClientComponents()"><a href="#!/products">CONTACTO</a></li>
-    <li ng-if="mainHeader.showAdminComponents()"><a href="#!/admin/products">PRODUCTOS</a></li>
-    <li ng-if="mainHeader.showAdminComponents()"><a href="#!/admin/orders">COMPRAS</a></li>
-    <li ng-if="mainHeader.showAdminComponents()"><a href="#!/products">TIENDA</a></li>
-    <li ng-if="mainHeader.showAdminComponents()"><a href="#!/products"></a></li>
-    <li ng-if="mainHeader.hideClientComponents()" shopping-cart-menu></li>
-    <li ng-if="mainHeader.showCart()" shopping-cart-menu></li>
-  </ul>
-</div>
+<nav class="navbar navbar-default navbar-fixed-top" ng-show="mainHeader.showMainHeader()">
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+
+      <a class="navbar-brand" href="#!/products">
+        <img alt="Hub Gourmet" src="img/logo.png">
+      </a>
+
+      <button type="button"
+              class="navbar-toggle collapsed" 
+              ng-click="mainHeader.expanded = !mainHeader.expanded">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <ul class="nav navbar-nav pull-right visible-xs-block">
+        <li shopping-cart-menu></li>
+      </ul>
+
+    </div>
+
+    <ul class="nav navbar-nav navbar-right hidden-xs">
+      <li shopping-cart-menu></li>
+    </ul>
+
+    <div class="collapse navbar-collapse collapse navbar-right" ng-class="{ in: mainHeader.expanded }">
+      <ul class="nav navbar-nav">
+        <li><a href="#!/products">Productos</a></li>
+        <li><a href="#!/products">Contacto</a></li>
+        <li class="dropdown" ng-if="mainHeader.showAdminComponents()" ng-class="{ open: mainheader.adminDropdownOpen }">
+          <a href
+              ng-click="mainheader.adminDropdownOpen = !mainheader.adminDropdownOpen"
+              class="dropdown-toggle"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false">
+            Admin<span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#!/admin/products">Inventario</a></li>
+            <li><a href="#!/admin/orders">Compras</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href ng-click="mainHeader.authService.logout()">Cerrar Sesión</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

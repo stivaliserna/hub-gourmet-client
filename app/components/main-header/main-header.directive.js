@@ -23,19 +23,14 @@ function mainHeader (ShoppingCartService, authService, localStorageService, $loc
 
     vm.authService = authService
     vm.showAdminComponents = showAdminComponents
-    vm.hideClientComponents = hideClientComponents
-    vm.showCart = showCart
+    vm.showMainHeader = showMainHeader
 
     function showAdminComponents () {
       return !!localStorageService.get('id_token')
     }
 
-    function hideClientComponents () {
-      return !localStorageService.get('id_token')
-    }
-
-    function showCart () {
-      return !!localStorageService.get('id_token') && ($location.path() === '/products')
+    function showMainHeader () {
+      return !['/login'].includes($location.path())
     }
   }
 }
