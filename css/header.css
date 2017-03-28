@@ -1,3 +1,12 @@
+.header-fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #FFF;
+  z-index: 
+}
+
 button {
   background: none;
   border: none;
@@ -11,8 +20,8 @@ button {
 }
 
 .main-container {
-  margin-bottom: 2em;
-  margin-top: 2em;
+  margin-bottom: 1em;
+  margin-top: 1em;
 }
 
 .main-brand {

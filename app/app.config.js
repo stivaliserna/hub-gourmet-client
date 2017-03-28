@@ -7,8 +7,8 @@ angular
   .config(configCurrencyLocale)
   .config(authConfig)
   .config(httpConfig)
-  /*.constant('API_BASE_URL', 'http://localhost:3001')*/
-  .constant('API_BASE_URL', 'https://hubgourmet.herokuapp.com')
+  .constant('API_BASE_URL', 'http://localhost:3001')
+  /* .constant('API_BASE_URL', 'https://hubgourmet.herokuapp.com') */
 
 routerConfig.$inject = ['$routeProvider']
 function routerConfig ($routeProvider) {
