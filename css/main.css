@@ -15,3 +15,27 @@ body {
   padding-top: 6em;
   font-family: 'Titillium Web', sans-serif;
 }
+
+
+.dropdown .dropdown-toggle:active ~ .dropdown-menu,
+.dropdown .dropdown-toggle:focus ~ .dropdown-menu {
+  display: block;
+}
+
+
+.dropdown .dropdown-toggle:active ~ .dropdown-close,
+.dropdown .dropdown-toggle:focus ~ .dropdown-close,
+.dropdown .dropdown-menu:active,
+.dropdown .dropdown-menu:focus {
+  display: block;
+}
+
+.dropdown .dropdown-close {
+  bottom: 0;
+  cursor: pointer;
+  display: none;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
