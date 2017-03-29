@@ -26,4 +26,4 @@ This is an Open Source e-commerce web application for the [Skylabcoders Academy]
 Stívali Serna - [@stivaliarantxa](https://twitter.com/stivaliarantxa)
 stivaliserna08@gmail.com
 
-Distributed under the GNU AFFERO GENERAL PUBLIC license. See [LICENSE.md](LICENSE.md) for more information.
+Distributed under the GNU AFFERO GENERAL PUBLIC license. See [LICENSE.md](https://github.com/stivaliserna/hub-gourmet-client/blob/master/LICENSE) for more information.
