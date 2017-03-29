@@ -1,4 +1,4 @@
-<div class="container admin-products-list">
+<div class="container-fluid admin-products-list">
   <div><a class="add-link" href="#!/admin/products/add">
     <i class="fa fa-plus-circle" aria-hidden="true"></i>
     <p>Añadir producto</p>
@@ -23,61 +23,45 @@
         <tr>
           <td class="center"><a href class="btn-archived" ng-click="admin.archivedProduct(product)"><i class="fa fa-minus-circle" aria-hidden="true"></i></a href></td>
           <td class="left" >{{ product.productID }}</td>
-          <td class="left"  
-              buttons="no" 
-              onaftersave="product.$save()" 
-              editable-text="product.description" 
-              ng-model="admin.newProductModel.description">
-              <a href>
-                <div>
-                  {{ product.description }}
-                  <i class="fa fa-pencil pull-right" aria-hidden="true"></i>
-                </div>
-              </a>
+          <td class="editable-table-cell left">
+            <p buttons="no"
+                  onaftersave="product.$save()" 
+                  editable-text="product.description">
+              {{ product.description }}
+            </p>
+            <i class="fa fa-pencil" aria-hidden="true"></i>
           </td>
-          <td class="right" 
-              buttons="no" 
-              onaftersave="product.$save()" 
-              editable-text="product.productUnitQuantity">
-              <a href>
-                <div>
-                  {{ product.productUnitQuantity }}
-                  <i class="fa fa-pencil pull-left" aria-hidden="true"></i>
-                </div>
-              </a>
+          <td class="editable-table-cell right">
+            <p buttons="no"
+                  onaftersave="product.$save()" 
+                  editable-text="product.productUnitQuantity">
+              {{ product.productUnitQuantity }}
+            </p>
+            <i class="fa fa-pencil" aria-hidden="true"></i>
           </td>
-          <td class="right" 
-              buttons="no" 
-              onaftersave="product.$save()" 
-              editable-text="product.productUnit">
-              <a href>
-                <div>
-                  {{ product.productUnit }}
-                  <i class="fa fa-pencil pull-left" aria-hidden="true"></i>
-                </div>
-              </a>
+          <td class="editable-table-cell right">
+            <p buttons="no"
+                  onaftersave="product.$save()" 
+                  editable-text="product.productUnit">
+              {{ product.productUnit }}
+            </p>
+            <i class="fa fa-pencil" aria-hidden="true"></i>
           </td>
-          <td class="right" 
-              buttons="no" 
-              onaftersave="product.$save()" 
-              editable-text="product.price">
-              <a href>
-                <div>
-                  {{ product.price }}
-                  <i class="fa fa-pencil pull-left" aria-hidden="true"></i>
-                </div>
-              </a>
+          <td class="editable-table-cell right">
+            <p buttons="no"
+                  onaftersave="product.$save()" 
+                  editable-text="product.price">
+              {{ product.price }}
+            </p>
+            <i class="fa fa-pencil" aria-hidden="true"></i>
           </td>
-          <td class="right" 
-              buttons="no" 
-              onaftersave="product.$save()" 
-              editable-text="product.minOrderQuantity">
-              <a href>
-                <div>
-                  {{ product.minOrderQuantity }}
-                  <i class="fa fa-pencil pull-left" aria-hidden="true"></i>
-                </div>
-              </a>
+          <td class="editable-table-cell right">
+            <p buttons="no"
+                  onaftersave="product.$save()" 
+                  editable-text="product.minOrderQuantity">
+              {{ product.minOrderQuantity }}
+            </p>
+            <i class="fa fa-pencil" aria-hidden="true"></i>
           </td>
         </tr>
       </tbody>

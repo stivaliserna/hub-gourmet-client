@@ -1,39 +1,11 @@
-.admin-products-list {
-  width: 130em;
-}
-
 .search-input {
   border: none;
 }
 
-table {
+.admin-products-list table {
   border-bottom: none;
   text-decoration: none;
   border-bottom: 2px;
-}
-
-input {
-  width: 15.7em;
-  height: 2.5em;
-}
-
-a {
-  
-  font-size: 1em;
-  color: black;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-a .fa-pencil {
-  opacity: 0;
-}
-
-a:hover .fa-pencil {
-  opacity: 1;
-  color: #7A7978;
 }
 
 .btn-archived {

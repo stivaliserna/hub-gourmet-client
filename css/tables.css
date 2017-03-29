@@ -1,40 +1,59 @@
+.table tr.left > tr,
+.table tr.left > td,
+.table tr.left > th,
 .table tr.left,
 .table td.left,
 .table th.left {
-  vertical-align: middle;
   text-align: left;
 }
 
+.table tr.center > tr,
+.table tr.center > td,
+.table tr.center > th,
 .table tr.center,
 .table td.center,
 .table th.center {
   text-align: center;
-  vertical-align: middle;
 }
 
+.table tr.right > tr,
+.table tr.right > td,
+.table tr.right > th,
 .table tr.right,
 .table td.right,
 .table th.right {
   text-align: right;
-  vertical-align: middle;
 }
 
+.table tr.top > tr,
+.table tr.top > td,
+.table tr.top > th,
 .table tr.top,
 .table td.top,
 .table th.top {
   vertical-align: top;
 }
 
+.table tr.middle > tr,
+.table tr.middle > td,
+.table tr.middle > th,
 .table tr.middle,
 .table td.middle,
 .table th.middle {
   vertical-align: middle;
 }
 
+.table tr.bottom > tr,
+.table tr.bottom > td,
+.table tr.bottom > th,
 .table tr.bottom,
 .table td.bottom,
 .table th.bottom {
   vertical-align: bottom;
+}
+
+.table .form-group {
+  margin: 0;
 }
 
 .table {
@@ -44,4 +63,58 @@
 
 .fa-caret-down {
   color: #FF4C51;
+}
+
+.editable-table-cell {
+  position: relative;
+}
+
+.editable-table-cell p {
+  color: #444;
+  border-color: transparent;
+  margin: 0;
+  cursor: pointer;
+}
+.editable-table-cell p:hover {
+  border-color: transparent;
+}
+
+.editable-table-cell > .fa {
+  position: absolute;
+  top: 50%;
+  margin-top: -.5em;
+  opacity: 0;
+  color: #7A7978;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.editable-table-cell:hover > .fa {
+  opacity: 1;
+}
+
+.editable-table-cell.left .fa {
+  right: .5em;
+}
+
+.editable-table-cell.right .fa {
+  left: .5em;
+}
+
+.editable-table-cell .editable-wrap {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.editable-table-cell .editable-wrap .editable-input {
+  width: 100%;
+  height: 100%;
+}
+
+.editable-table-cell .editable-hide {
+  display: unset !important;
 }
