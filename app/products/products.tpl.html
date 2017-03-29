@@ -28,8 +28,8 @@
 <div class="products-text">ordena ahora los productos que desees</div>
 
 <section class="container products-list">
-  <div class="row">
-    <div class="product-card pull-left col-xs-12 col-md-6 col-lg-4" ng-repeat="product in products.productsList | filter: { archived: false }">
+  <div class="row" ng-repeat="chunk in products.productsList track by $index">
+    <div class="product-card col-md-4" ng-repeat="product in chunk track by product._id">
       <div class="img-product-card">
         <img ng-src="{{ product.base64Img || '../download.jpg' }}" alt="">
         <div class="product-card-shop">

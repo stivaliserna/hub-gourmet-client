@@ -3,17 +3,20 @@
 angular
   .module('hubGourmetApp')
   .controller('productsController', [
+    '$filter',
     'ProductService',
     'ShoppingCartService',
     productsController
   ])
 
-function productsController (ProductService, ShoppingCartService) {
+function productsController ($filter, ProductService, ShoppingCartService) {
   let vm = this
+  let chunk = $filter('chunk')
 
   vm.hasMore = true
   vm.limit = 3
   vm.skip = 0
+  // Not an array of products, but an array of chunks
   vm.productsList = []
 
   vm.addItem = ShoppingCartService.addItem
@@ -27,7 +30,12 @@ function productsController (ProductService, ShoppingCartService) {
 
   function fetchProducts (skip, limit) {
     ProductService.query({ skip: skip, limit: limit }).$promise.then(function success (data) {
-      vm.productsList = vm.productsList.concat(data)
+      let chunks = chunk(data, 3)
+
+      chunks.forEach(function (el) {
+        vm.productsList.push(el)
+      })
+
       vm.hasMore = data.length === vm.limit
       vm.skip += vm.limit
     })
