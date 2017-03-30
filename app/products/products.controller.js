@@ -14,7 +14,7 @@ function productsController ($filter, ProductService, ShoppingCartService) {
   let chunk = $filter('chunk')
 
   vm.hasMore = true
-  vm.limit = 3
+  vm.limit = 9
   vm.skip = 0
   // Not an array of products, but an array of chunks
   vm.productsList = []
