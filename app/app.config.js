@@ -89,6 +89,7 @@ function authConfig (lockProvider, jwtOptionsProvider) {
         language: 'es',
         title: ''
       },
+      allowSignUp: false,
       theme: {
         logo: 'img/logo.png',
         primaryColor: '#FF4C51'
