@@ -1,12 +1,3 @@
-.hersheys, .nestle {
-  display: none;
-}
-
-.nutella img {
-  width: 100%;
-  height: 30;
-}
-
 .products-text {
   width: 65%;
   padding-bottom: 1em;
@@ -18,6 +9,21 @@
   margin-bottom: 1em;
   text-align: center;
   border-bottom: 2px solid #999898;
+}
+
+section.products-list {
+  margin-top: 3em;
+}
+
+input.products-filter {
+  background-color: #f6f6f6;
+  border-radius: 0;
+  border: none;
+  font-size: 1.2em;
+  height: 3em;
+  max-width: 30em;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .product-card {
@@ -135,7 +141,6 @@
   position: absolute;
   right: 0;
   z-index: 1;
-  
   text-align: center;
   background-color: #FFF;
   opacity: 0.8;
@@ -176,19 +181,28 @@
   color: #F7F7F7;
 }
 
-@media (min-width: 620px) {
+.public-img {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 45em;
+}
+
+.public-img.nutella {
+  background-image: url('../img/nutella1.jpg');
+}
+
+.public-img.hersheys {
+  background-image: url('../img/hersheys1.jpg');
+}
+
+.public-img.nestle {
+  background-image: url('../img/nestle1.jpg');
+}
+
+@media (min-width: 768px) {
   .btn-add {
-  margin-top: 6em;
-  }
-
-  .hersheys  {
-    display: inline-block;
-  }
-
-  .init img {
-    width: 100%;
-    height: 35em;
-    object-fit: cover;
+    margin-top: 6em;
   }
 
   .public-img .aside {
@@ -218,16 +232,7 @@
   }
 }
 
-@media (min-width: 1000px) {
-  .hersheys, .nestle  {
-    display: inline-block;
-  }
-
-  .init img {
-    width: 100%;
-    height: 50em;
-  }
-
+@media (min-width: 992px) {
   .public-img .aside {
     width: 23em;
     display: block;
@@ -253,16 +258,7 @@
   }
 }
 
-@media (min-width: 1300px) {
-  .hersheys, .nestle  {
-    display: inline-block;
-  }
-
-  .init img {
-    width: 100%;
-    height: 50em;
-  }
-
+@media (min-width: 1200px) {
   .public-img .aside {
     width: 30em;
     display: block;
