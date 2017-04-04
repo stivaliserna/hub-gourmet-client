@@ -3,17 +3,17 @@
     <div class="form-group">
       <label for="productID">Referencia</label>
       <input type="text"
-             class="form-control"  
-             name="productID" 
-             ng-model="add.newProductModel.productID" 
+             class="form-control"
+             name="productID"
+             ng-model="add.newProductModel.productID"
              placeholder="Añadir referencia del producto">
     </div>
     <div class="form-group">
       <label for="description">Producto</label>
       <input type="text"
-             class="form-control"  
-             name="description" 
-             ng-model="add.newProductModel.description" 
+             class="form-control"
+             name="description"
+             ng-model="add.newProductModel.description"
              placeholder="Añadir descripción del producto">
     </div>
     <div class="form-group row">
@@ -21,43 +21,43 @@
         <label for="productUnit">Unidad de medida y Cantidad</label>
       </div>
       <div class="col-xs-2">
-        <select class="form-control" 
-                ng-model="add.newProductModel.productUnit" 
+        <select class="form-control"
+                ng-model="add.newProductModel.productUnit"
                 ng-options="unit.unit as unit.label for unit in add.measureUnits">
         </select>
       </div>
       <div class="col-xs-10">
         <input type="number"
-               class="form-control"  
-               name="productUnitQuantity" 
-               ng-model="add.newProductModel.productUnitQuantity" 
+               class="form-control"
+               name="productUnitQuantity"
+               ng-model="add.newProductModel.productUnitQuantity"
                placeholder="Añadir cantidad del producto">
       </div>
     </div>
     <div class="form-group">
       <label for="price">Precio</label>
       <input type="number"
-             class="form-control"  
-             name="price" 
-             ng-model="add.newProductModel.price" 
+             class="form-control"
+             name="price"
+             ng-model="add.newProductModel.price"
              placeholder="Añadir precio del producto">
     </div>
     <div class="form-group">
-      <label for="minOrderQuantity">Compra mínima</label>
+      <label for="minOrderQuantity">Stock</label>
       <input type="number"
-             class="form-control"  
-             name="minOrderQuantity" 
-             ng-model="add.newProductModel.minOrderQuantity" 
-             placeholder="Añadir orden de compra mínima del producto">
+             class="form-control"
+             name="minOrderQuantity"
+             ng-model="add.newProductModel.minOrderQuantity"
+             placeholder="Añadir stock disponible del producto">
     </div>
     <div class="form-group row">
       <div class="col-xs-12">
         <label for="file">Imagen</label>
       </div>
       <div class="col-xs-8">
-        <input type='file' 
+        <input type='file'
                ng-model='add.imageModel'
-               accept="image/*" 
+               accept="image/*"
                maxsize="5000"
                required base-sixty-four-input>
         <p class="help-block">Selecciona una imagen del producto</p>
