@@ -11,7 +11,6 @@ angular
 
 function productsController ($filter, ProductService, ShoppingCartService) {
   let vm = this
-  let chunk = $filter('chunk')
 
   vm.hasMore = true
   vm.limit = 9
@@ -30,9 +29,7 @@ function productsController ($filter, ProductService, ShoppingCartService) {
 
   function fetchProducts (skip, limit) {
     ProductService.query({ skip: skip, limit: limit }).$promise.then(function success (data) {
-      let chunks = chunk(data, 3)
-
-      chunks.forEach(function (el) {
+      data.forEach(function (el) {
         vm.productsList.push(el)
       })
 
